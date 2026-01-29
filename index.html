@@ -11,23 +11,17 @@
 </head>
 
 <body>
-    <main>
+    <main id="app">
         <div class="container">
             <nav class="sidebar">
-                <button type="button" class="sidebar__item sidebar__item--active">
-                    <i class="fa-solid fa-dumbbell"></i>
-                </button>
-
-                <button type="button" class="sidebar__item">
-                    <i class="fa-solid fa-cloud-rain"></i>
-                </button>
-
-                <button type="button" class="sidebar__item">
-                    <i class="fa-solid fa-mountain"></i>
-                </button>
-
-                <button type="button" class="sidebar__item">
-                    <i class="fa-solid fa-cloud-bolt"></i>
+                <button
+                    type="button"
+                    :class="'sidebar__item ' + (item.id === activeId ? 'sidebar__item--active' : '') "
+                    v-for="item in navigationItems"
+                    :title="item.title"
+                    @click="setActiveId(item.id)"
+                >
+                    <i :class="item.icon"></i>
                 </button>
             </nav>
 
@@ -52,36 +46,16 @@
                 <div class="card card--plus">
                     <i class="fa-solid fa-plus"></i>
                 </div>
-                <div class="card">
+                <div class="card" v-for="card in cards">
                     <img src="" alt="" class="card__image">
-                    <p class="card__text">John Doe</p>
-                </div>
-                <div class="card">
-                    <img src="" alt="" class="card__image">
-                    <p class="card__text">John Doe</p>
-                </div>
-                <div class="card">
-                    <img src="" alt="" class="card__image">
-                    <p class="card__text">John Doe</p>
-                </div>
-
-                <div class="card">
-                    <img src="" alt="" class="card__image">
-                    <p class="card__text">John Doe</p>
-                </div>
-
-                <div class="card">
-                    <img src="" alt="" class="card__image">
-                    <p class="card__text">John Doe</p>
-                </div>
-
-                <div class="card">
-                    <img src="" alt="" class="card__image">
-                    <p class="card__text">John Doe</p>
+                    <p class="card__text"> {{ card.text }} </p>
                 </div>
             </div>
         </div>
     </main>
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script setup src="./js/common.js"></script>
 </body>
 
 </html>
