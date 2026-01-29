@@ -57,7 +57,6 @@ const cards = ref([
 
 const activeId = ref(0);
 const all = ref(false);
-const title = ref('')
 
 const currentCategoryItemList = computed(() => {
   if (all.value) {
