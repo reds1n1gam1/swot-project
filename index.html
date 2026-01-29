@@ -4,58 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles/_main.css">
-    <link rel="stylesheet" href="./styles/_reset.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
     <title>SWOT Project</title>
 </head>
 
 <body>
     <main id="app">
-        <div class="container">
-            <nav class="sidebar">
-                <button
-                    type="button"
-                    :class="'sidebar__item ' + (item.id === activeId ? 'sidebar__item--active' : '') "
-                    v-for="item in navigationItems"
-                    :title="item.title"
-                    @click="setActiveId(item.id)"
-                >
-                    <i :class="item.icon"></i>
-                </button>
-            </nav>
-
-            <header class="header">
-                <div class="header__left">
-                    <p class="header__title">Strength</p>
-                </div>
-
-                <div class="header__switchers">
-                    <button type="button" class="header__switcher">
-                        <i class="fa-solid fa-grip"></i>
-                    </button>
-                    <button type="button" class="header__switcher">
-                        <i class="fa-solid fa-bars"></i>
-                    </button>
-                </div>
-
-
-            </header>
-
-            <div class="content">
-                <div class="card card--plus">
-                    <i class="fa-solid fa-plus"></i>
-                </div>
-                <div class="card" v-for="card in cards">
-                    <img src="" alt="" class="card__image">
-                    <p class="card__text"> {{ card.text }} </p>
-                </div>
-            </div>
-        </div>
+        
     </main>
 
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-    <script setup src="./js/common.js"></script>
+    <script type="module" src="/src/main.ts"></script>
 </body>
 
 </html>
