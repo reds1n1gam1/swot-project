@@ -41,6 +41,13 @@ main {
     align-items: center;
     font-size: 24px;
     background: transparent;
+    transition: transform 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.sidebar__item:hover {
+    transform: scale(1.02);
+    cursor: pointer;
+    color: rgb(256 256 256)
 }
 
 .sidebar__item--active {
@@ -52,7 +59,7 @@ main {
     display: flex;
     justify-content: space-between;
     align-items: center;
-} 
+}
 
 .header__left {
     display: flex;
@@ -71,7 +78,6 @@ main {
     background: transparent;
 }
 
-
 .card {
     height: 160px;
     background-color: #1a2037;
@@ -79,6 +85,12 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: transform 0.2s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.02);
+    cursor: pointer;
 }
 
 .card--plus {
