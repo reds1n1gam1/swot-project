@@ -24,36 +24,7 @@ const navigationItems = ref([
   },
 ])
 
-const cards = ref([
-  { text: 'Clear product vision and focused scope', type: 0 },
-  { text: 'Modern and flexible frontend architecture', type: 0 },
-  { text: 'High development speed with minimal bureaucracy', type: 0 },
-  { text: 'Good performance on low-cost infrastructure', type: 0 },
-  { text: 'Easy onboarding for new contributors', type: 0 },
-  { text: 'Reusable components and UI patterns', type: 0 },
-  { text: 'Strong alignment with current web standards', type: 0 },
-
-  { text: 'Limited documentation at the early stage', type: 1 },
-  { text: 'No dedicated QA or testing pipeline', type: 1 },
-  { text: 'Single point of failure in decision-making', type: 1 },
-  { text: 'Incomplete error handling in edge cases', type: 1 },
-  { text: 'Lack of long-term roadmap', type: 1 },
-  { text: 'Manual deployment steps in some environments', type: 1 },
-
-  { text: 'Potential to attract early adopters and feedback', type: 2 },
-  { text: 'Ability to pivot quickly based on user needs', type: 2 },
-  { text: 'Integration with popular third-party APIs', type: 2 },
-  { text: 'Expansion into new markets or niches', type: 2 },
-  { text: 'Monetization through premium features', type: 2 },
-  { text: 'Open-source visibility and community growth', type: 2 },
-  { text: 'Use as a technical showcase for hiring', type: 2 },
-  { text: 'Automation of repetitive user workflows', type: 2 },
-
-  { text: 'Changes in platform pricing or policies', type: 3 },
-  { text: 'Emergence of similar tools with better funding', type: 3 },
-  { text: 'Breaking changes in core dependencies', type: 3 },
-  { text: 'Security vulnerabilities in third-party libraries', type: 3 }
-])
+const cards = ref([])
 
 const activeId = ref(0);
 const all = ref(false);
@@ -71,13 +42,37 @@ const mainTitle = computed(() => {
   return navigationItems.value[activeId.value]?.title
 })
 
+let inputText = ''
+let inputType = 0
+
 function setActiveId(id: number) {
   all.value = false;
   activeId.value = id
 }
 
-function toggle() {
-  all.value = !all.value
+function resetFilter() {
+  all.value = true;
+}
+
+function addNewItem() {
+  if (inputText) {
+    console.log(inputText)
+    console.log(inputType)
+
+
+    cards.value.push({
+      type: inputType,
+      text: inputText,
+    })
+
+    clearInput()
+  }
+
+}
+
+function clearInput() {
+  inputText = ''
+  inputType = 0;
 }
 
 </script>
@@ -85,7 +80,7 @@ function toggle() {
 <template>
   <div class="container">
     <nav class="sidebar">
-      <button type="button" class="sidebar__item" @click="toggle">
+      <button type="button" class="sidebar__item" @click="resetFilter">
         <i class="fa-solid fa-border-all"></i>
       </button>
       <button type="button" :class="'sidebar__item ' + (item.id === activeId ? 'sidebar__item--active' : '')"
@@ -108,19 +103,32 @@ function toggle() {
         </button>
       </div>
 
-
     </header>
 
     <div class="content">
-      <div class="card card--plus">
-        <i class="fa-solid fa-plus"></i>
-      </div>
       <div :class="'card ' + ' card--' + card.type" v-for="card in currentCategoryItemList">
         <img src="" alt="" class="card__image">
         <p class="card__text"> {{ card.text }} </p>
       </div>
+      <div class="card card--plus">
+        <i class="fa-solid fa-plus"></i>
+      </div>
+    </div>
+
+    <span></span>
+
+    <div class="input">
+      <input v-model="inputText" type="text">
+      <select v-model="inputType" name="type" id="">
+        <option :value="0">Strength</option>
+        <option :value="1">Weakness</option>
+        <option :value="2">Opportunites</option>
+        <option :value="3">Threats</option>
+      </select>
+      <button type="button" @click="addNewItem">Add</button>
     </div>
   </div>
+
 </template>
 
 <style scoped></style>
