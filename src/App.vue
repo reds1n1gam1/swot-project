@@ -24,7 +24,15 @@ const navigationItems = ref([
   },
 ])
 
-const cards = ref([])
+const cards = ref([
+  { text: 'Clear product vision and focused scope', type: 0 },
+
+  { text: 'Limited documentation at the early stage', type: 1 },
+
+  { text: 'Potential to attract early adopters and feedback', type: 2 },
+
+  { text: 'Changes in platform pricing or policies', type: 3 },
+])
 
 const activeId = ref(0);
 const all = ref(false);
@@ -91,7 +99,7 @@ function clearInput() {
 
     <header class="header">
       <div class="header__left">
-        <p class="header__title"> {{ mainTitle }} </p>
+        <p class="header__title"> {{ mainTitle ? mainTitle : 'All' }} </p>
       </div>
 
       <div class="header__switchers">
