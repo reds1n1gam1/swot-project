@@ -1,5 +1,27 @@
-# Vue 3 + TypeScript + Vite
+# Vue + Vite playground
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+ Small personal project to explore Vue 3, Vite, and modern frontend tooling
+(WIP, focused on component structure and basic state management)
 
-Learn more about the recommended Project Setup and IDE Support in the [Vue Docs TypeScript Guide](https://vuejs.org/guide/typescript/overview.html#project-setup).
+## Demo link
+- [Link](https://swot-project-production.up.railway.app/)
+
+## Next tasks
+- [x] Add styles
+- [x] Add simple funmctional
+- [ ] Add list grid toggle
+- [ ] Add input styles
+- [ ] Fix start empty object
+- [ ] Add mobile versions
+- [ ] Demo MVP
+- [ ] Add save in local storage / indexDB
+- [ ] Add saving as PDF / Image / Or just download maybe?
+- [ ] Add filter on elements
+- [ ] Look card detailed
+- [ ] Squash
+- [ ] Add tags for options
+- [ ] Add prettier
+- [ ] Add linter
+- [ ] Add commitlinter
+- [ ] Custom domain ( ? )
+- [ ] Set other goals
