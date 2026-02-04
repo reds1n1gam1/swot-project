@@ -9,8 +9,8 @@
 ## Next tasks
 - [x] Add styles
 - [x] Add simple funmctional
+- [x] Add input styles
 - [ ] Add list grid toggle
-- [ ] Add input styles
 - [ ] Fix start empty object
 - [ ] Add mobile versions
 - [ ] Demo MVP
