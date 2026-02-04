@@ -1,4 +1,7 @@
 :root {
+  --primary-color: #232b41;
+  --secondary-color: #1a2037;
+
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -26,7 +29,13 @@ main {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background-color: #1a2037;
+  background-color: var(--secondary-color);
+}
+
+.main {
+  display: grid;
+  gap: 32px;
+  justify-items: center;
 }
 
 .container {
@@ -35,13 +44,13 @@ main {
   gap: 16px;
   padding: 24px;
   border-radius: 20px;
-  background-color: #232b41;
+  background-color: var(--primary-color);
   flex-grow: 1;
   max-width: 80%;
 }
 
 .sidebar {
-  background-color: #1a2037;
+  background-color: var(--secondary-color);
   grid-row: 1 / span 2;
   display: flex;
   align-items: center;
@@ -103,7 +112,7 @@ main {
   position: relative;
   height: 160px;
   padding: 16px;
-  background-color: #1a2037;
+  background-color: var(--secondary-color);
   border-radius: 12px;
   display: flex;
   justify-content: center;
@@ -135,7 +144,7 @@ main {
 }
 
 .card--3 {
-  --card-color: #EF4444;
+  --card-color: #ef4444;
 }
 
 .card:hover {
@@ -145,4 +154,40 @@ main {
 
 .card--plus {
   background-color: #2f3651;
+}
+
+.input {
+  display: grid;
+  gap: 16px;
+  border-radius: 4px;
+  background-color: #232b41;
+  padding: 16px 24px;
+}
+
+.input__form {
+  border: none;
+  padding: 12px;
+  border-radius: 4px;
+  background: transparent;
+  border: 1px solid #2f3651;
+}
+
+.input__button {
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 12px;
+  border-radius: 4px;
+  background: var(--secondary-color);
+}
+
+.input__categories {
+  display: grid;
+  gap: 8px;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.input__category-item {
+  background-color: var(--secondary-color);
+  padding: 12px;
 }

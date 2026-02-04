@@ -86,54 +86,71 @@ function clearInput() {
 </script>
 
 <template>
-  <div class="container">
-    <nav class="sidebar">
-      <button type="button" class="sidebar__item" @click="resetFilter">
-        <i class="fa-solid fa-border-all"></i>
-      </button>
-      <button type="button" :class="'sidebar__item ' + (item.id === activeId ? 'sidebar__item--active' : '')"
-        v-for="item in navigationItems" :title="item.title" @click="setActiveId(item.id)">
-        <i :class="item.icon"></i>
-      </button>
-    </nav>
-
-    <header class="header">
-      <div class="header__left">
-        <p class="header__title"> {{ mainTitle ? mainTitle : 'All' }} </p>
-      </div>
-
-      <div class="header__switchers">
-        <button type="button" class="header__switcher">
-          <i class="fa-solid fa-grip"></i>
+  <div class="main">
+    <div class="container">
+      <nav class="sidebar">
+        <button type="button" class="sidebar__item" @click="resetFilter">
+          <i class="fa-solid fa-border-all"></i>
         </button>
-        <button type="button" class="header__switcher">
-          <i class="fa-solid fa-bars"></i>
+        <button type="button" :class="'sidebar__item ' + (item.id === activeId ? 'sidebar__item--active' : '')"
+          v-for="item in navigationItems" :title="item.title" @click="setActiveId(item.id)">
+          <i :class="item.icon"></i>
         </button>
+      </nav>
+
+      <header class="header">
+        <div class="header__left">
+          <p class="header__title"> {{ mainTitle ? mainTitle : 'All' }} </p>
+        </div>
+
+        <div class="header__switchers">
+          <button type="button" class="header__switcher">
+            <i class="fa-solid fa-grip"></i>
+          </button>
+          <button type="button" class="header__switcher">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+
+      </header>
+
+      <div class="content">
+        <div :class="'card ' + ' card--' + card.type" v-for="card in currentCategoryItemList">
+          <img src="" alt="" class="card__image">
+          <p class="card__text"> {{ card.text }} </p>
+        </div>
+        <div class="card card--plus">
+          <i class="fa-solid fa-plus"></i>
+        </div>
       </div>
 
-    </header>
-
-    <div class="content">
-      <div :class="'card ' + ' card--' + card.type" v-for="card in currentCategoryItemList">
-        <img src="" alt="" class="card__image">
-        <p class="card__text"> {{ card.text }} </p>
-      </div>
-      <div class="card card--plus">
-        <i class="fa-solid fa-plus"></i>
-      </div>
     </div>
 
-    <span></span>
-
     <div class="input">
-      <input v-model="inputText" type="text">
-      <select v-model="inputType" name="type" id="">
-        <option :value="0">Strength</option>
-        <option :value="1">Weakness</option>
-        <option :value="2">Opportunites</option>
-        <option :value="3">Threats</option>
-      </select>
-      <button type="button" @click="addNewItem">Add</button>
+      <div class="input__categories">
+        <div class="input__category-item">
+          <input type="radio" name="swot" id="Strength" :value="0" v-model="inputType" />
+          <label for="Strength">Strength</label>
+        </div>
+
+        <div class="input__category-item">
+          <input type="radio" name="swot" id="Weakness" :value="1" v-model="inputType" />
+          <label for="Weakness">Weakness</label>
+        </div>
+
+        <div class="input__category-item">
+          <input type="radio" name="swot" id="Opportunites" :value="2" v-model="inputType" />
+          <label for="Opportunites">Opportunites</label>
+        </div>
+
+        <div class="input__category-item">
+          <input type="radio" name="swot" id="Threats" :value="3" v-model="inputType" />
+          <label for="Threats">Threats</label>
+        </div>
+      </div>
+
+      <input v-model="inputText" class="input__form" type="text">
+      <button class="input__button" type="button" @click="addNewItem">Add</button>
     </div>
   </div>
 
