@@ -12,7 +12,8 @@
 - [x] Add input styles
 - [x] Divide to components
 - [x] Divide styles
-- [ ] Fix code
+- [x] Fix code
+- [ ] Fix menu and filter functionality
 - [ ] Make all items view
 - [ ] Add card open
 - [ ] Add popup to view card text
