@@ -1,8 +1,8 @@
-import { getCardsFromStorage } from "./card-storage.helper.service"
+import type { Card } from "../types/card"
+import { getCardsFromStorage } from "./card-storage-service"
 
 export function useCardService() {
-    function getAll() {
-        // Additional business logic or transformations here
+    function getAll(): Card[] {
         return getCardsFromStorage()
     }
 

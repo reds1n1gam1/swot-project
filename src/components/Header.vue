@@ -18,9 +18,10 @@
 
 <script setup lang="ts">
 import { computed } from 'vue';
+import { SWOT_NAVIGATION } from '../constants/constants';
 
 const mainTitle = computed(() => {
-    return navigationItems.value[activeId.value]?.title
+    return SWOT_NAVIGATION[0]?.title
 })
 
 </script>

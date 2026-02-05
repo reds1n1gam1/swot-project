@@ -1,14 +1,14 @@
 <template>
-    <div :class="'card ' + ' card--' + card.type" v-for="card in currentCategoryItemList">
+    <div :class="'card card--' + card.type">
         <img src="" alt="" class="card__image">
         <p class="card__text"> {{ card.text }} </p>
     </div>
 </template>
 
 <script setup lang="ts">
-const props = defineProps(['options'])
+const props = defineProps(['card'])
 
-console.log(props.options)
+console.log(props.card)
 </script>
 
 <style scoped>

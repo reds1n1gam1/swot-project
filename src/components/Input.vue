@@ -29,6 +29,10 @@
 
 
 <script setup lang="ts">
+import { useCardStore } from '../store/card-store'
+
+const cardStore = useCardStore()
+
 let inputText = ''
 let inputType = 0
 
@@ -38,7 +42,7 @@ function addNewItem() {
         console.log(inputType)
 
 
-        cards.value.push({
+        cardStore.addCard({
             type: inputType,
             text: inputText,
         })

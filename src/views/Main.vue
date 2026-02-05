@@ -5,7 +5,7 @@
             <Header />
 
             <div class="content">
-                <Card v-for="card in currentCategoryItemList" :options="card" />
+                <Card v-for="card in currentCategoryItemList" :card="card" />
 
                 <div class="card card--plus">
                     <i class="fa-solid fa-plus"></i>
@@ -26,17 +26,23 @@ import Header from "../components/Header.vue"
 import Input from "../components/Input.vue"
 import Sidebar from "../components/Sidebar.vue"
 import Card from "../components/Card.vue"
+import { useCardStore } from '../store/card-store'
+import { swotType } from '../types/card'
 
-const activeId = ref(0);
+const cardStore = useCardStore()
+
+cardStore.fetchCards()
+
+const activeId = ref(swotType.Strength);
 const all = ref(false);
 
 const currentCategoryItemList = computed(() => {
-    if (all.value) {
-        activeId.value = -1;
-        return cards.value
-    }
+    // if (all.value) {
+    //     activeId.value = -1;
+    //     return cardStore.cards
+    // }
 
-    return cards.value.filter((item) => item.type === activeId.value)
+    return cardStore.cards
 })
 
 </script>
