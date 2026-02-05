@@ -2,7 +2,6 @@
     <div class="main">
         <div class="container">
             <Sidebar />
-
             <Header />
 
             <div class="content">
