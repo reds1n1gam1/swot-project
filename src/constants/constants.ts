@@ -20,13 +20,3 @@ export const SWOT_NAVIGATION = [
         id: 3,
     },
 ]
-
-export const MOCK_CARDS = [
-    { text: 'Clear product vision and focused scope', type: 0 },
-
-    { text: 'Limited documentation at the early stage', type: 1 },
-
-    { text: 'Potential to attract early adopters and feedback', type: 2 },
-
-    { text: 'Changes in platform pricing or policies', type: 3 },
-]

@@ -10,10 +10,19 @@
 - [x] Add styles
 - [x] Add simple funmctional
 - [x] Add input styles
+- [x] Divide to components
+- [x] Divide styles
+- [ ] Fix code
+- [ ] Make all items view
+- [ ] Add card open
+- [ ] Add popup to view card text
+- [ ] Add popup to add new card
 - [ ] Add list grid toggle
 - [ ] Fix start empty object
 - [ ] Add mobile versions
 - [ ] Demo MVP
+- [ ] Add meta tags
+- [ ] Add github footer
 - [ ] Add save in local storage / indexDB
 - [ ] Add saving as PDF / Image / Or just download maybe?
 - [ ] Add filter on elements
