@@ -27,21 +27,12 @@ import Input from "../components/Input.vue"
 import Sidebar from "../components/Sidebar.vue"
 import Card from "../components/Card.vue"
 import { useCardStore } from '../store/card-store'
-import { swotType } from '../types/card'
 
 const cardStore = useCardStore()
 
 cardStore.fetchCards()
 
-const activeId = ref(swotType.Strength);
-const all = ref(false);
-
 const currentCategoryItemList = computed(() => {
-    // if (all.value) {
-    //     activeId.value = -1;
-    //     return cardStore.cards
-    // }
-
     return cardStore.cards
 })
 

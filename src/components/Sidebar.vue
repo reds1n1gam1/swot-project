@@ -3,8 +3,8 @@
         <button type="button" class="sidebar__item" @click="resetFilter">
             <i class="fa-solid fa-border-all"></i>
         </button>
-        <button type="button" :class="'sidebar__item ' + (item.id === activeId ? 'sidebar__item--active' : '')"
-            v-for="item in navigationItems" :title="item.title" @click="setActiveId(item.id)">
+        <button type="button" :class="'sidebar__item ' + (item.id === activeType ? 'sidebar__item--active' : '')"
+            v-for="item in navigationItems" :title="item.title" @click="setActiveMenu(item.id)">
             <i :class="item.icon"></i>
         </button>
     </nav>
@@ -12,19 +12,22 @@
 
 
 <script setup lang="ts">
-import { ref } from 'vue';
+import { computed, ref } from 'vue';
 import { SWOT_NAVIGATION } from '../constants/constants';
+import { useAppStore } from '../store/app-store';
 
 const navigationItems = ref(SWOT_NAVIGATION)
 
+const appStore = useAppStore()
 
-function setActiveId(id: number) {
-    all.value = false;
-    activeId.value = id
+const activeType = computed(() => appStore.selectedType)
+
+function setActiveMenu(id: number) {
+    appStore.setActiveType(id)
 }
 
 function resetFilter() {
-    all.value = true;
+    appStore.resetType()
 }
 </script>
 
