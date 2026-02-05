@@ -21,7 +21,7 @@
 - [ ] Fix start empty object
 - [ ] Add mobile versions
 - [ ] Demo MVP
-- [ ] Add meta tags
+- [x] Add meta tags
 - [ ] Add github footer
 - [ ] Add save in local storage / indexDB
 - [ ] Add saving as PDF / Image / Or just download maybe?
