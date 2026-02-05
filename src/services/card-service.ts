@@ -1,4 +1,4 @@
-import { getCardsFromStorage } from "./cardLocalStorage"
+import { getCardsFromStorage } from "./card-storage.helper.service"
 
 export function useCardService() {
     function getAll() {
