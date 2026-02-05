@@ -33,4 +33,5 @@
 - [ ] Add linter
 - [ ] Add commitlinter
 - [ ] Custom domain ( ? )
+- [ ] Make railway trigger only on release ( ? )
 - [ ] Set other goals
