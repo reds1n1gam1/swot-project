@@ -9,17 +9,15 @@
             </div>
 
             <div class="content" v-else>
-                <Card v-for="card in currentCategoryItemList" :card="card" />
-
-                <div class="card card--plus" @click="appStore.setInputModalState(true)">
-                    <i class="fa-solid fa-plus"></i>
-                </div>
+                <Card v-for="card in currentCategoryItemList" :card="card" :type="CardComponentTypes.Card" />
+                <Card :type="CardComponentTypes.Add" />
             </div>
 
         </div>
 
         <Teleport to="body">
             <modal :show="appStore.showInputModal" @close="appStore.setInputModalState(false)">
+                <template #header> Add new item </template>
                 <template #body>
                     <Input />
                 </template>
@@ -42,6 +40,7 @@ import AllListView from "../components/AllList.vue"
 import Modal from "../components/Modal.vue"
 import { useCardStore } from '../store/card-store'
 import { useAppStore } from '../store/app-store'
+import { CardComponentTypes } from '../types/card'
 
 const cardStore = useCardStore()
 const appStore = useAppStore()

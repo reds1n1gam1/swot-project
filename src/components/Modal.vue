@@ -12,8 +12,7 @@
 
                 <div class="modal-footer">
                     <slot name="footer">
-                        default footer
-                        <button class="modal-default-button" @click="$emit('close')">OK</button>
+                        <button class="modal-default-button" @click="$emit('close')">Close</button>
                     </slot>
                 </div>
             </div>
@@ -41,10 +40,10 @@ const props = defineProps({
 }
 
 .modal-container {
-    width: 300px;
+    width: 540px;
     margin: auto;
     padding: 20px 30px;
-    background-color: #fff;
+    background-color: var(--primary-bg-color);
     border-radius: 2px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.33);
     transition: all 0.3s ease;
@@ -75,5 +74,14 @@ const props = defineProps({
 .modal-leave-to .modal-container {
     -webkit-transform: scale(1.1);
     transform: scale(1.1);
+}
+
+.modal-default-button {
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    padding: 12px;
+    border-radius: 4px;
+    background: var(--secondary-color);
 }
 </style>

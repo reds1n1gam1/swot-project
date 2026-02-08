@@ -9,3 +9,8 @@ export enum swotType {
     "Opportunites",
     "Threats",
 }
+
+export enum CardComponentTypes {
+    'Card',
+    'Add'
+}

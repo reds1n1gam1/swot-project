@@ -1,12 +1,24 @@
 <template>
-    <div :class="'card card--' + card.type">
-        <img src="" alt="" class="card__image">
-        <p class="card__text"> {{ card.text }} </p>
-    </div>
+    <template v-if="props.type === CardComponentTypes.Card">
+        <div :class="'card card--' + card.type">
+            <img src="" alt="" class="card__image">
+            <p class="card__text"> {{ card.text }} </p>
+        </div>
+    </template>
+    <template v-else>
+        <div class="card card--plus" @click="appStore.setInputModalState(true)">
+            <i class="fa-solid fa-plus"></i>
+        </div>
+    </template>
 </template>
 
 <script setup lang="ts">
-const props = defineProps(['card'])
+import { useAppStore } from '../store/app-store';
+import { CardComponentTypes } from '../types/card';
+
+const appStore = useAppStore()
+
+const props = defineProps(['card', 'type'])
 
 console.log(props.card)
 </script>

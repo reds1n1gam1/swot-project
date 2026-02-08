@@ -38,9 +38,6 @@ let inputType = 0
 
 function addNewItem() {
     if (inputText) {
-        console.log(inputText)
-        console.log(inputType)
-
 
         cardStore.addCard({
             type: inputType,
@@ -63,7 +60,6 @@ function clearInput() {
     display: grid;
     gap: 16px;
     border-radius: 4px;
-    background-color: #232b41;
     padding: 16px 24px;
 }
 
@@ -71,7 +67,7 @@ function clearInput() {
     border: none;
     padding: 12px;
     border-radius: 4px;
-    background: transparent;
+    background: var(--secondary-color);
     border: 1px solid #2f3651;
 }
 
