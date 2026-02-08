@@ -4,15 +4,6 @@
             <p class="header__title"> {{ mainTitle }} </p>
         </div>
 
-        <div class="header__switchers">
-            <button type="button" class="header__switcher">
-                <i class="fa-solid fa-grip"></i>
-            </button>
-            <button type="button" class="header__switcher">
-                <i class="fa-solid fa-bars"></i>
-            </button>
-        </div>
-
     </header>
 </template>
 

@@ -20,6 +20,9 @@
 - [x] Add popup to add new card
 - [x] Fix input clear
 - [x] Fix header dynamic title
+- [ ] Add save in local storage / indexDB
+- [ ] Add local storage clear
+- [ ] Add remove some item from local storage
 - [ ] Add card open
 - [ ] Add popup to view card text
 - [ ] Add list grid toggle
@@ -27,7 +30,6 @@
 - [ ] Add mobile versions
 - [ ] Demo MVP
 - [ ] Add github footer
-- [ ] Add save in local storage / indexDB
 - [ ] Add saving as PDF / Image / Or just download maybe?
 - [ ] Add filter on elements
 - [ ] Look card detailed

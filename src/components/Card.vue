@@ -19,8 +19,6 @@ import { CardComponentTypes } from '../types/card';
 const appStore = useAppStore()
 
 const props = defineProps(['card', 'type'])
-
-console.log(props.card)
 </script>
 
 <style scoped>

@@ -18,6 +18,11 @@ export const useCardStore = defineStore('card', () => {
 
     function addCard(card: Card) {
         cards.value.push(card)
+        cardService.addCard(card)
+    }
+
+    function resetCards() {
+        cardService.resetCards()
     }
 
     return {
@@ -25,5 +30,6 @@ export const useCardStore = defineStore('card', () => {
         fetchCards,
         getCardByType,
         addCard,
+        resetCards,
     }
 })
