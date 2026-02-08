@@ -74,7 +74,7 @@ const currentCategoryItemList = computed(() => {
     border-radius: 20px;
     background-color: var(--primary-color);
     flex-grow: 1;
-    max-width: 80%;
+    width: 1140px;
 }
 
 
