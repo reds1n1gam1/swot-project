@@ -13,11 +13,11 @@
 - [x] Divide to components
 - [x] Divide styles
 - [x] Fix code
-- [ ] Fix menu and filter functionality
-- [ ] Make all items view
+- [x] Fix menu and filter functionality
+- [x] Make all items view
+- [ ] Add popup to add new card
 - [ ] Add card open
 - [ ] Add popup to view card text
-- [ ] Add popup to add new card
 - [ ] Add list grid toggle
 - [ ] Fix start empty object
 - [ ] Add mobile versions

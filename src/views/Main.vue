@@ -4,7 +4,11 @@
             <Sidebar />
             <Header />
 
-            <div class="content">
+            <div class="content content--list" v-if="appStore.allListView">
+                <AllListView/>
+            </div>
+
+            <div class="content" v-else>
                 <Card v-for="card in currentCategoryItemList" :card="card" />
 
                 <div class="card card--plus">
@@ -26,6 +30,7 @@ import Header from "../components/Header.vue"
 import Input from "../components/Input.vue"
 import Sidebar from "../components/Sidebar.vue"
 import Card from "../components/Card.vue"
+import AllListView from "../components/AllList.vue"
 import { useCardStore } from '../store/card-store'
 import { useAppStore } from '../store/app-store'
 
@@ -70,5 +75,9 @@ const currentCategoryItemList = computed(() => {
     gap: 12px;
     grid-template-columns: repeat(4, 1fr);
     background: transparent;
+}
+
+.content--list {
+    grid-template-columns: initial;
 }
 </style>

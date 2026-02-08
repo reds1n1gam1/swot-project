@@ -36,19 +36,19 @@ console.log(props.card)
 }
 
 .card--0 {
-    --card-color: #22c55e;
+    --card-color: var(--strength-color);
 }
 
 .card--1 {
-    --card-color: #f97316;
+    --card-color: var(--weak-color);
 }
 
 .card--2 {
-    --card-color: #3b82f6;
+    --card-color: var(--opport-color);
 }
 
 .card--3 {
-    --card-color: #ef4444;
+    --card-color: var(--threats-color);
 }
 
 .card:hover {
@@ -57,6 +57,6 @@ console.log(props.card)
 }
 
 .card--plus {
-    background-color: #2f3651;
+    background-color: var(--primary-bg-color);
 }
 </style>
