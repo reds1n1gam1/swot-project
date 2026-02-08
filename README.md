@@ -20,7 +20,7 @@
 - [x] Add popup to add new card
 - [x] Fix input clear
 - [x] Fix header dynamic title
-- [ ] Add save in local storage / indexDB
+- [x] Add save in local storage / indexDB
 - [ ] Add local storage clear
 - [ ] Add remove some item from local storage
 - [ ] Add card open
