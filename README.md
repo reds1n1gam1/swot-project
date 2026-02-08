@@ -15,6 +15,7 @@
 - [x] Fix code
 - [x] Fix menu and filter functionality
 - [x] Make all items view
+- [x] Add meta tags
 - [ ] Add popup to add new card
 - [ ] Add card open
 - [ ] Add popup to view card text
@@ -22,7 +23,6 @@
 - [ ] Fix start empty object
 - [ ] Add mobile versions
 - [ ] Demo MVP
-- [x] Add meta tags
 - [ ] Add github footer
 - [ ] Add save in local storage / indexDB
 - [ ] Add saving as PDF / Image / Or just download maybe?
@@ -34,5 +34,6 @@
 - [ ] Add linter
 - [ ] Add commitlinter
 - [ ] Custom domain ( ? )
+- [ ] Add analytics
 - [ ] Make railway trigger only on release ( ? )
 - [ ] Set other goals
