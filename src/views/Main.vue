@@ -5,20 +5,28 @@
             <Header />
 
             <div class="content content--list" v-if="appStore.allListView">
-                <AllListView/>
+                <AllListView />
             </div>
 
             <div class="content" v-else>
                 <Card v-for="card in currentCategoryItemList" :card="card" />
 
-                <div class="card card--plus">
+                <div class="card card--plus" @click="appStore.setInputModalState(true)">
                     <i class="fa-solid fa-plus"></i>
                 </div>
             </div>
 
         </div>
 
-        <Input />
+        <Teleport to="body">
+            <modal :show="appStore.showInputModal" @close="appStore.setInputModalState(false)">
+                <template #body>
+                    <Input />
+                </template>
+            </modal>
+        </Teleport>
+
+
     </div>
 </template>
 
@@ -31,6 +39,7 @@ import Input from "../components/Input.vue"
 import Sidebar from "../components/Sidebar.vue"
 import Card from "../components/Card.vue"
 import AllListView from "../components/AllList.vue"
+import Modal from "../components/Modal.vue"
 import { useCardStore } from '../store/card-store'
 import { useAppStore } from '../store/app-store'
 
