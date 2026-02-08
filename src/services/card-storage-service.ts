@@ -22,6 +22,7 @@ const swotMockData: Card[] = [
     { type: 3, text: 'Dependence on third-party hosting services' }
 ]
 
+// TODO: write functions to get cards from local storage
 export function getCardsFromStorage() {
     return swotMockData
 }

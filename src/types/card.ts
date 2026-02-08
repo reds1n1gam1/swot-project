@@ -4,7 +4,6 @@ export type Card = {
 }
 
 export enum swotType {
-    "All",
     "Strength",
     "Weakness",
     "Opportunites",
