@@ -70,6 +70,7 @@ const threatsList = computed(() => cardStore.getCardByType(swotType.Threats))
 .list-view__section {
     padding: 12px;
     display: grid;
+    align-content: start;
     gap: 8px
 }
 
