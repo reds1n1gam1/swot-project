@@ -16,6 +16,7 @@
 - [x] Fix menu and filter functionality
 - [x] Make all items view
 - [x] Add meta tags
+- [x] Add settings to open modals
 - [ ] Add popup to add new card
 - [ ] Add card open
 - [ ] Add popup to view card text
