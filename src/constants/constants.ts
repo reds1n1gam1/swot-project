@@ -1,22 +1,24 @@
+import { swotType } from "../types/card";
+
 export const SWOT_NAVIGATION = [
     {
         title: 'Strength',
         icon: 'fa-solid fa-dumbbell',
-        id: 0,
+        type: swotType.Strength
     },
     {
         title: 'Weakness',
         icon: 'fa-solid fa-cloud-rain',
-        id: 1,
+        type: swotType.Weakness
     },
     {
         title: 'Opportunites',
         icon: 'fa-solid fa-mountain',
-        id: 2,
+        type: swotType.Opportunites
     },
     {
         title: 'Threats',
         icon: 'fa-solid fa-cloud-bolt',
-        id: 3,
+        type: swotType.Threats
     },
 ]

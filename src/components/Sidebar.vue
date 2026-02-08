@@ -1,10 +1,11 @@
 <template>
     <nav class="sidebar">
-        <button type="button" class="sidebar__item" @click="resetFilter">
+        <button type="button" :class="'sidebar__item ' + (activeType === null ? 'sidebar__item--active' : '')"
+            @click="resetFilter">
             <i class="fa-solid fa-border-all"></i>
         </button>
-        <button type="button" :class="'sidebar__item ' + (item.id === activeType ? 'sidebar__item--active' : '')"
-            v-for="item in navigationItems" :title="item.title" @click="setActiveMenu(item.id)">
+        <button type="button" :class="'sidebar__item ' + (item.type === activeType ? 'sidebar__item--active' : '')"
+            v-for="item in navigationItems" :title="item.title" @click="setActiveMenu(item.type)">
             <i :class="item.icon"></i>
         </button>
     </nav>
@@ -15,6 +16,7 @@
 import { computed, ref } from 'vue';
 import { SWOT_NAVIGATION } from '../constants/constants';
 import { useAppStore } from '../store/app-store';
+import type { swotType } from '../types/card';
 
 const navigationItems = ref(SWOT_NAVIGATION)
 
@@ -22,8 +24,8 @@ const appStore = useAppStore()
 
 const activeType = computed(() => appStore.selectedType)
 
-function setActiveMenu(id: number) {
-    appStore.setActiveType(id)
+function setActiveMenu(type: swotType) {
+    appStore.setActiveType(type)
 }
 
 function resetFilter() {

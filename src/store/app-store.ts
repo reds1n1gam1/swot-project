@@ -3,14 +3,14 @@ import { ref } from 'vue'
 import { swotType } from '../types/card'
 
 export const useAppStore = defineStore('app', () => {
-    const selectedType = ref<swotType>(swotType.Strength)
+    const selectedType = ref<swotType | null>()
 
     function setActiveType(type: swotType) {
         selectedType.value = type
     }
 
     function resetType() {
-        selectedType.value = swotType.Strength
+        selectedType.value = null
     }
 
     return {

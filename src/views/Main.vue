@@ -20,19 +20,27 @@
 
 <script setup lang="ts">
 
-import { computed, ref } from 'vue'
+import { computed } from 'vue'
 
 import Header from "../components/Header.vue"
 import Input from "../components/Input.vue"
 import Sidebar from "../components/Sidebar.vue"
 import Card from "../components/Card.vue"
 import { useCardStore } from '../store/card-store'
+import { useAppStore } from '../store/app-store'
 
 const cardStore = useCardStore()
+const appStore = useAppStore()
 
 cardStore.fetchCards()
 
 const currentCategoryItemList = computed(() => {
+    const selectedType = appStore.selectedType
+
+    if (selectedType !== null && selectedType !== undefined) {
+        return cardStore.getCardByType(selectedType)
+    }
+
     return cardStore.cards
 })
 
