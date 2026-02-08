@@ -29,11 +29,12 @@
 
 
 <script setup lang="ts">
+import { ref } from 'vue'
 import { useCardStore } from '../store/card-store'
 
 const cardStore = useCardStore()
 
-let inputText = ''
+let inputText = ref('')
 let inputType = 0
 
 function addNewItem() {
@@ -41,7 +42,7 @@ function addNewItem() {
 
         cardStore.addCard({
             type: inputType,
-            text: inputText,
+            text: inputText.value,
         })
 
         clearInput()
@@ -50,7 +51,7 @@ function addNewItem() {
 
 
 function clearInput() {
-    inputText = ''
+    inputText.value = ''
     inputType = 0;
 }
 </script>
