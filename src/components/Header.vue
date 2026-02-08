@@ -1,7 +1,7 @@
 <template>
     <header class="header">
         <div class="header__left">
-            <p class="header__title"> {{ mainTitle ? mainTitle : 'All' }} </p>
+            <p class="header__title"> {{ mainTitle }} </p>
         </div>
 
         <div class="header__switchers">
@@ -19,9 +19,19 @@
 <script setup lang="ts">
 import { computed } from 'vue';
 import { SWOT_NAVIGATION } from '../constants/constants';
+import { useAppStore } from '../store/app-store';
+
+const appStore = useAppStore()
 
 const mainTitle = computed(() => {
-    return SWOT_NAVIGATION[0]?.title
+    const type = appStore.selectedType
+
+    if (type !== null && type !== undefined) {
+        return SWOT_NAVIGATION[type]?.title
+    }
+
+    return "SWOT"
+
 })
 
 </script>

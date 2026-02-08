@@ -17,7 +17,9 @@
 - [x] Make all items view
 - [x] Add meta tags
 - [x] Add settings to open modals
-- [ ] Add popup to add new card
+- [x] Add popup to add new card
+- [x] Fix input clear
+- [x] Fix header dynamic title
 - [ ] Add card open
 - [ ] Add popup to view card text
 - [ ] Add list grid toggle
