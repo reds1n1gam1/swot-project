@@ -75,23 +75,23 @@ const threatsList = computed(() => cardStore.getCardByType(swotType.Threats))
 }
 
 .list-view__section:nth-child(1) {
-    border-right: 1px solid;
-    border-bottom: 1px solid;
+    border-right: 1px solid var(--primary-bg-color);
+    border-bottom: 1px solid var(--primary-bg-color);
 }
 
 .list-view__section:nth-child(2) {
-    border-left: 1px solid;
-    border-bottom: 1px solid;
+    border-left: 1px solid var(--primary-bg-color);
+    border-bottom: 1px solid var(--primary-bg-color);
 }
 
 .list-view__section:nth-child(3) {
-    border-right: 1px solid;
-    border-top: 1px solid;
+    border-right: 1px solid var(--primary-bg-color);
+    border-top: 1px solid var(--primary-bg-color);
 }
 
 .list-view__section:nth-child(4) {
-    border-left: 1px solid;
-    border-top: 1px solid;
+    border-left: 1px solid var(--primary-bg-color);
+    border-top: 1px solid var(--primary-bg-color);
 }
 
 .list-view__title {

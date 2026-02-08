@@ -21,20 +21,19 @@
 - [x] Fix input clear
 - [x] Fix header dynamic title
 - [x] Add save in local storage / indexDB
+- [x] Add filter on elements
+- [x] Squash
+- [x] Add list grid toggle
+- [x] Fix start empty object
 - [ ] Add local storage clear
 - [ ] Add remove some item from local storage
 - [ ] Add card open
 - [ ] Add popup to view card text
-- [ ] Add list grid toggle
-- [ ] Fix start empty object
 - [ ] Add mobile versions
 - [ ] Demo MVP
 - [ ] Add github footer
 - [ ] Add saving as PDF / Image / Or just download maybe?
-- [ ] Add filter on elements
 - [ ] Look card detailed
-- [ ] Squash
-- [ ] Add tags for options
 - [ ] Add prettier
 - [ ] Add linter
 - [ ] Add commitlinter
