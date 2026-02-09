@@ -1,7 +1,7 @@
 <template>
     <div class="list-view">
         <section class="list-view__section">
-            <p class="list-view__title">Strength</p>
+            <p class="list-view__title">Strength ({{ strengthList.length }})</p>
             <div class="list-view__content">
                 <div class="list-view__item list-view__item--0" v-for="item in strengthList">
                     <span class="list-view__indicator"></span>
@@ -12,7 +12,7 @@
         </section>
 
         <section class="list-view__section">
-            <p class="list-view__title">Weakness</p>
+            <p class="list-view__title">Weakness ({{ weaknessList.length }})</p>
             <div class="list-view__content">
                 <div class="list-view__item list-view__item--1" v-for="item in weaknessList">
                     <span class="list-view__indicator"></span>
@@ -23,7 +23,7 @@
         </section>
 
         <section class="list-view__section">
-            <p class="list-view__title">Opportunites</p>
+            <p class="list-view__title">Opportunites ({{ opportunitesList.length }})</p>
             <div class="list-view__content">
                 <div class="list-view__item list-view__item--2" v-for="item in opportunitesList">
                     <span class="list-view__indicator"></span>
@@ -34,7 +34,7 @@
         </section>
 
         <section class="list-view__section">
-            <p class="list-view__title">Threats</p>
+            <p class="list-view__title">Threats ({{ threatsList.length }})</p>
             <div class="list-view__content">
                 <div class="list-view__item list-view__item--3" v-for="item in threatsList">
                     <span class="list-view__indicator"></span>
