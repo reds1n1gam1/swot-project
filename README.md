@@ -27,7 +27,7 @@
 - [x] Fix start empty object
 - [x] Add counter on point titles 
 - [ ] Add remove, edit and add on main list
-- [ ] Add enter submit
+- [x] Add enter submit
 - [ ] Add bar chart view
 - [ ] Open main list
 - [ ] Add local storage clear

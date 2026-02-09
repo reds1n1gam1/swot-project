@@ -22,7 +22,7 @@
             </div>
         </div>
 
-        <input v-model="inputText" class="input__form" type="text">
+        <input v-model="inputText" class="input__form" type="text" @keyup.enter="addNewItem">
         <button class="input__button" type="button" @click="addNewItem">Add</button>
     </div>
 </template>
