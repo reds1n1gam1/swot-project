@@ -25,6 +25,11 @@
 - [x] Squash
 - [x] Add list grid toggle
 - [x] Fix start empty object
+- [ ] Add counter on point titles 
+- [ ] Add remove, edit and add on main list
+- [ ] Add enter submit
+- [ ] Add bar chart view
+- [ ] Open main list
 - [ ] Add local storage clear
 - [ ] Add remove some item from local storage
 - [ ] Add card open
