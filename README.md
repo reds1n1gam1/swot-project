@@ -26,14 +26,19 @@
 - [x] Add list grid toggle
 - [x] Fix start empty object
 - [x] Add counter on point titles 
-- [ ] Add remove, edit and add on main list
 - [x] Add enter submit
-- [ ] Add bar chart view
-- [ ] Open main list
-- [ ] Add local storage clear
-- [ ] Add remove some item from local storage
+- [x] Add card remove
 - [ ] Add card open
 - [ ] Add popup to view card text
+- [ ] Add remove on main list
+- [ ] Add edit on main list
+- [ ] Add cardd add on main list
+- [ ] Add opening main list on start
+- [ ] Add bar chart view
+- [ ] Open main list
+- [ ] Add card edit
+- [ ] Add local storage clear
+- [ ] Add remove some item from local storage
 - [ ] Add mobile versions
 - [ ] Demo MVP
 - [ ] Add github footer

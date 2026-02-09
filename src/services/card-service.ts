@@ -1,5 +1,5 @@
 import type { Card } from "../types/card"
-import { addCardToStorage, getCardsFromStorage, resetCardsFromLocalStorage } from "./card-storage-service"
+import { addCardToStorage, getCardsFromStorage, resetCardsFromLocalStorage, removeFromStorage } from "./card-storage-service"
 
 export function useCardService() {
     function getAll(): Card[] {
@@ -14,9 +14,14 @@ export function useCardService() {
         return resetCardsFromLocalStorage()
     }
 
+    function removeCard(id: number) {
+        removeFromStorage(id)
+    }
+
     return {
         getAll,
         addCard,
-        resetCards
+        resetCards,
+        removeCard,
     }
 }
