@@ -31,7 +31,7 @@
 - [x] Add card open
 - [x] Add popup to view card text
 - [x] Fix bug with input type switch
-- [ ] Fix radio buttons
+- [x] Fix radio buttons
 - [ ] Add remove on main list
 - [ ] Add edit on main list
 - [ ] Add cardd add on main list

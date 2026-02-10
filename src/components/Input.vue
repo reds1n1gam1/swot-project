@@ -2,27 +2,28 @@
     <div class="input">
         <div class="input__categories">
             <div class="input__category-item">
-                <input type="radio" name="swot" id="Strength" :value="0" v-model="inputType" />
-                <label for="Strength">Strength</label>
+                <input class="input__option" type="radio" name="swot" id="Strength" :value="0" v-model="inputType" \ />
+                <i class="fa-solid fa-dumbbell"></i>
             </div>
 
             <div class="input__category-item">
-                <input type="radio" name="swot" id="Weakness" :value="1" v-model="inputType" />
-                <label for="Weakness">Weakness</label>
+                <input class="input__option" type="radio" name="swot" id="Weakness" :value="1" v-model="inputType" \ />
+                <i class="fa-solid fa-cloud-rain"></i>
             </div>
 
             <div class="input__category-item">
-                <input type="radio" name="swot" id="Opportunites" :value="2" v-model="inputType" />
-                <label for="Opportunites">Opportunites</label>
+                <input class="input__option" type="radio" name="swot" id="Opportunites" :value="2" v-model="inputType"
+                    \ />
+                <i class="fa-solid fa-mountain"></i>
             </div>
 
             <div class="input__category-item">
-                <input type="radio" name="swot" id="Threats" :value="3" v-model="inputType" />
-                <label for="Threats">Threats</label>
+                <input class="input__option" type="radio" name="swot" id="Threats" :value="3" v-model="inputType" \ />
+                <i class="fa-solid fa-cloud-bolt"></i>
             </div>
         </div>
 
-        <input v-model="inputText" class="input__form" type="text" @keyup.enter="addNewItem">
+        <input v-model="inputText" class="input__form" type="text" placeholder="Please write here your text" @keyup.enter="addNewItem">
         <button class="input__button" type="button" @click="addNewItem">Add</button>
     </div>
 </template>
@@ -87,7 +88,26 @@ function clearInput() {
 }
 
 .input__category-item {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: var(--secondary-color);
-    padding: 12px;
+    padding: 16px 8px;
+    font-size: 24px;
+    cursor: pointer;
+    transition: background-color 200ms ease-in-out;
+}
+
+.input__category-item:has(.input__option:checked) {
+    background-color: var(--primary-color);
+}
+
+.input__option {
+    opacity: 1;
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    cursor: pointer;
 }
 </style>
