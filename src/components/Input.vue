@@ -52,7 +52,6 @@ function addNewItem() {
 
 function clearInput() {
     inputText.value = ''
-    inputType = 0;
 }
 </script>
 
