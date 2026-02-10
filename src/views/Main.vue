@@ -23,8 +23,6 @@
                 </template>
             </modal>
         </Teleport>
-
-
     </div>
 </template>
 

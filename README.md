@@ -28,8 +28,8 @@
 - [x] Add counter on point titles 
 - [x] Add enter submit
 - [x] Add card remove
-- [ ] Add card open
-- [ ] Add popup to view card text
+- [x] Add card open
+- [x] Add popup to view card text
 - [ ] Add remove on main list
 - [ ] Add edit on main list
 - [ ] Add cardd add on main list

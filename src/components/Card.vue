@@ -1,13 +1,13 @@
 <template>
     <template v-if="props.type === CardComponentTypes.Card">
-        <div :class="'card card--' + card.type">
+        <div :class="'card card--' + card.type" @click="openCardDescription(card)">
             <img src="" alt="" class="card__image">
             <p class="card__text"> {{ card.text }} </p>
             <div class="card__actions">
                 <button type="button" class="card__button">
                     <i class="fa-solid fa-pen-to-square"></i>
                 </button>
-                <button type="button" class="card__button" @click="removeCard(card.id)">
+                <button type="button" class="card__button" @click.stop="removeCard(card.id)">
                     <i class="fa-solid fa-trash"></i>
                 </button>
             </div>
@@ -18,12 +18,24 @@
             <i class="fa-solid fa-plus"></i>
         </div>
     </template>
+
+    <Teleport to="body">
+        <modal :show="appStore.showCardModal" @close="closeCardDescription">
+            <template #body>
+                <div :class="'card card--' + appStore.selectedCardToShow?.type">
+                    <img src="" alt="" class="card__image">
+                    <p class="card__text"> {{ appStore.selectedCardToShow?.text }} </p>
+                </div>
+            </template>
+        </modal>
+    </Teleport>
 </template>
 
 <script setup lang="ts">
 import { useAppStore } from '../store/app-store';
 import { useCardStore } from '../store/card-store';
-import { CardComponentTypes } from '../types/card';
+import { CardComponentTypes, type Card } from '../types/card';
+import Modal from "../components/Modal.vue"
 
 const appStore = useAppStore()
 const cardStore = useCardStore()
@@ -33,6 +45,18 @@ const props = defineProps(['card', 'type'])
 function removeCard(id: number) {
     cardStore.removeCard(id)
 }
+
+function openCardDescription(card: Card) {
+    appStore.selectCardToShow(card);
+    appStore.setCardModalState(true)
+}
+
+
+function closeCardDescription() {
+    appStore.selectCardToShow()
+    appStore.setCardModalState(false)
+}
+
 </script>
 
 <style scoped>
