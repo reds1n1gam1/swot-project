@@ -28,22 +28,24 @@
 - [x] Add counter on point titles 
 - [x] Add enter submit
 - [x] Add card remove
+- [x] Add remove some item from local storage
 - [x] Add card open
 - [x] Add popup to view card text
 - [x] Fix bug with input type switch
 - [x] Fix radio buttons
+- [ ] Add Menu
+- [ ] Add banner text
+- [ ] Add github footer
+- [ ] Open main list on start
+- [ ] Add card edit
 - [ ] Add remove on main list
 - [ ] Add edit on main list
 - [ ] Add cardd add on main list
 - [ ] Add opening main list on start
-- [ ] Add bar chart view
-- [ ] Open main list
-- [ ] Add card edit
-- [ ] Add local storage clear
-- [ ] Add remove some item from local storage
+- [ ] Add local storage clear ( ? )
 - [ ] Add mobile versions
+- [ ] Add bar chart view
 - [ ] Demo MVP
-- [ ] Add github footer
 - [ ] Add saving as PDF / Image / Or just download maybe?
 - [ ] Look card detailed
 - [ ] Add prettier
