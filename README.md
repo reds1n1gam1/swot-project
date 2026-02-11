@@ -35,6 +35,7 @@
 - [x] Fix radio buttons
 - [x] Add banner text
 - [x] Add github footer
+- [x] Add Menu
 - [ ] Open main list on start
 - [ ] Add card edit
 - [ ] Add remove on main list
@@ -44,7 +45,6 @@
 - [ ] Add local storage clear ( ? )
 - [ ] Add mobile versions
 - [ ] Add bar chart view
-- [ ] Add Menu
 - [ ] Fill correct data and text
 - [ ] Demo MVP
 - [ ] Add saving as PDF / Image / Or just download maybe?

@@ -1,5 +1,6 @@
 <template>
     <div class="main">
+        <Navigation></Navigation>
         <MainBanner></MainBanner>
         
         <div class="container">
@@ -44,6 +45,7 @@ import { useAppStore } from '../store/app-store'
 import { CardComponentTypes } from '../types/card'
 import MainBanner from '../components/MainBanner.vue'
 import Footer from '../components/Footer.vue'
+import Navigation from '../components/Navigation.vue'
 
 const cardStore = useCardStore()
 const appStore = useAppStore()
