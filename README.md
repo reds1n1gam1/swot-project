@@ -33,9 +33,8 @@
 - [x] Add popup to view card text
 - [x] Fix bug with input type switch
 - [x] Fix radio buttons
-- [ ] Add Menu
-- [ ] Add banner text
-- [ ] Add github footer
+- [x] Add banner text
+- [x] Add github footer
 - [ ] Open main list on start
 - [ ] Add card edit
 - [ ] Add remove on main list
@@ -45,6 +44,8 @@
 - [ ] Add local storage clear ( ? )
 - [ ] Add mobile versions
 - [ ] Add bar chart view
+- [ ] Add Menu
+- [ ] Fill correct data and text
 - [ ] Demo MVP
 - [ ] Add saving as PDF / Image / Or just download maybe?
 - [ ] Look card detailed

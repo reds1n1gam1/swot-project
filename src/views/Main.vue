@@ -1,5 +1,7 @@
 <template>
     <div class="main">
+        <MainBanner></MainBanner>
+        
         <div class="container">
             <Sidebar />
             <Header />
@@ -12,8 +14,9 @@
                 <Card v-for="card in currentCategoryItemList" :card="card" :type="CardComponentTypes.Card" />
                 <Card :type="CardComponentTypes.Add" />
             </div>
-
         </div>
+
+        <Footer></Footer>
 
         <Teleport to="body">
             <modal :show="appStore.showInputModal" @close="appStore.setInputModalState(false)">
@@ -39,6 +42,8 @@ import Modal from "../components/Modal.vue"
 import { useCardStore } from '../store/card-store'
 import { useAppStore } from '../store/app-store'
 import { CardComponentTypes } from '../types/card'
+import MainBanner from '../components/MainBanner.vue'
+import Footer from '../components/Footer.vue'
 
 const cardStore = useCardStore()
 const appStore = useAppStore()
@@ -58,12 +63,6 @@ const currentCategoryItemList = computed(() => {
 </script>
 
 <style scoped>
-.main {
-    display: grid;
-    gap: 32px;
-    justify-items: center;
-}
-
 .container {
     display: grid;
     grid-template-columns: auto 1fr;
