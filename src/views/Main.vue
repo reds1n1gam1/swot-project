@@ -2,7 +2,7 @@
     <div class="main">
         <Navigation></Navigation>
         <MainBanner></MainBanner>
-        
+
         <div class="container">
             <Sidebar />
             <Header />
@@ -65,6 +65,10 @@ const currentCategoryItemList = computed(() => {
 </script>
 
 <style scoped>
+.main {
+    padding: 0 0 32px 0;
+}
+
 .container {
     display: grid;
     grid-template-columns: auto 1fr;
