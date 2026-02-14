@@ -29,6 +29,7 @@ export const useCardStore = defineStore('card', () => {
 
     function resetCards() {
         cardService.resetCards()
+        cards.value = []
     }
 
 

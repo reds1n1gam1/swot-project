@@ -36,13 +36,13 @@
 - [x] Add banner text
 - [x] Add github footer
 - [x] Add Menu
-- [ ] Open main list on start
+- [x] Open main list on start
+- [x] Add local storage clear
 - [ ] Add card edit
 - [ ] Add remove on main list
 - [ ] Add edit on main list
 - [ ] Add cardd add on main list
 - [ ] Add opening main list on start
-- [ ] Add local storage clear ( ? )
 - [ ] Add mobile versions
 - [ ] Add bar chart view
 - [ ] Fill correct data and text

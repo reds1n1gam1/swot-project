@@ -3,8 +3,8 @@ import { ref } from 'vue'
 import { swotType, type Card } from '../types/card'
 
 export const useAppStore = defineStore('app', () => {
-    const selectedType = ref<swotType | null>(swotType.Strength)
-    const allListView = ref(false)
+    const selectedType = ref<swotType | null>(null)
+    const allListView = ref(true)
     const showInputModal = ref(false)
     const showCardModal = ref(false)
     const selectedCardToShow = ref<Card>()

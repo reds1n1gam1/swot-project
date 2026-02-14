@@ -1,5 +1,5 @@
 import type { Card } from "../types/card"
-import { addCardToStorage, getCardsFromStorage, resetCardsFromLocalStorage, removeFromStorage } from "./card-storage-service"
+import { addCardToStorage, getCardsFromStorage, resetCardsFromLocalStorage, removeFromStorage, } from "./card-storage-service"
 
 export function useCardService() {
     function getAll(): Card[] {
