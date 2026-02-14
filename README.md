@@ -48,6 +48,7 @@
 - [ ] Add opening main list on start
 - [ ] Add mobile versions
 - [ ] Add bar chart view
+- [ ] Fix bug with swot main tool skiping
 - [ ] Fill correct data and text
 - [ ] Demo MVP
 - [ ] Add saving as PDF / Image / Or just download maybe?
