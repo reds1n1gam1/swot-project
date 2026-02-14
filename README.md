@@ -38,6 +38,9 @@
 - [x] Add Menu
 - [x] Open main list on start
 - [x] Add local storage clear
+- [x] Add about block with link
+- [ ] Add navigation on button click
+- [ ] Add banner navigation actions
 - [ ] Add card edit
 - [ ] Add remove on main list
 - [ ] Add edit on main list

@@ -17,6 +17,8 @@
             </div>
         </div>
 
+        <About></About>
+
         <Footer></Footer>
 
         <Teleport to="body">
@@ -46,6 +48,7 @@ import { CardComponentTypes } from '../types/card'
 import MainBanner from '../components/MainBanner.vue'
 import Footer from '../components/Footer.vue'
 import Navigation from '../components/Navigation.vue'
+import About from '../components/About.vue'
 
 const cardStore = useCardStore()
 const appStore = useAppStore()
