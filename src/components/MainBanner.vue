@@ -3,7 +3,7 @@
         <h1 class="banner__title">Plan your strategy with <span>SWOT</span></h1>
         <h2 class="banner__subtitle">Use this tool to quickly evaluate risks and opportunities before you commit.</h2>
         <div class="banner__action">
-            <button type="button" class="banner__button">Start Analysis</button>
+            <a href="#tool" class="banner__button">Start Analysis</a>
             <button type="button" class="banner__button">Export / Share</button>
         </div>
     </div>

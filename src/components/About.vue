@@ -1,5 +1,5 @@
 <template>
-    <div class="banner">
+    <div class="banner" id="information">
         <h1 class="banner__title">In strategic planning and strategic management, SWOT analysis</h1>
         <p class="banner__subtitle">The name is an acronym for four components:
 

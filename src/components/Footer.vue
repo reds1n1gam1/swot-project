@@ -3,9 +3,7 @@
         <div class="footer__title">SWOT Tool</div>
         <div class="footer__subtitle">Have questions or suggestions? We’d love to hear from you.</div>
         <ul class="footer__links">
-            <li>Email</li>
-            <li>Phone</li>
-            <li>Github</li>
+            <li>Email: <a href="mailto:madisaginaliyev@gmail.com">madisaginaliyev@gmail.com</a></li>
         </ul>
         <div class="footer__bottom">
             <p class="footer__text">SWOT Tool</p>

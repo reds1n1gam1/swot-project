@@ -39,8 +39,9 @@
 - [x] Open main list on start
 - [x] Add local storage clear
 - [x] Add about block with link
-- [ ] Add navigation on button click
-- [ ] Add banner navigation actions
+- [x] Add navigation on button click
+- [x] Add banner navigation actions
+- [x] Fill correct data and text
 - [ ] Add card edit
 - [ ] Add remove on main list
 - [ ] Add edit on main list
@@ -49,7 +50,6 @@
 - [ ] Add mobile versions
 - [ ] Add bar chart view
 - [ ] Fix bug with swot main tool skiping
-- [ ] Fill correct data and text
 - [ ] Demo MVP
 - [ ] Add saving as PDF / Image / Or just download maybe?
 - [ ] Look card detailed
