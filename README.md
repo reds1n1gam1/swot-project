@@ -42,20 +42,21 @@
 - [x] Add navigation on button click
 - [x] Add banner navigation actions
 - [x] Fill correct data and text
+- [ ] Add mobile versions
+- [ ] Demo MVP
 - [ ] Add card edit
 - [ ] Add remove on main list
 - [ ] Add edit on main list
 - [ ] Add cardd add on main list
 - [ ] Add opening main list on start
-- [ ] Add mobile versions
 - [ ] Add bar chart view
 - [ ] Fix bug with swot main tool skiping
-- [ ] Demo MVP
 - [ ] Add saving as PDF / Image / Or just download maybe?
 - [ ] Look card detailed
 - [ ] Add prettier
 - [ ] Add linter
 - [ ] Add commitlinter
+- [ ] Add husky
 - [ ] Custom domain ( ? )
 - [ ] Add analytics
 - [ ] Make railway trigger only on release ( ? )
