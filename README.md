@@ -4,7 +4,7 @@
 (WIP, focused on component structure and basic state management)
 
 ## Demo link
-- [Link](https://swot-project-production.up.railway.app/)
+- [Link](https://swot-online.com/)
 
 ## Next tasks
 - [x] Add styles
