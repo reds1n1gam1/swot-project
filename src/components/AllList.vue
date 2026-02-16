@@ -136,4 +136,18 @@ const threatsList = computed(() => cardStore.getCardByType(swotType.Threats))
 .list-view__item--3 {
     --indicator-color: var(--threats-color);
 }
+
+@media(max-width: 767px) {
+    .list-view {
+        grid-template-columns: auto;
+    }
+
+    .list-view__section:nth-child(1n) {
+        border-left: initial;
+        border-top: initial;
+        border-right: initial;
+        border-bottom: 1px solid var(--primary-bg-color);
+    }
+}
+
 </style>

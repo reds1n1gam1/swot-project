@@ -110,4 +110,11 @@ function clearInput() {
     opacity: 0;
     cursor: pointer;
 }
+
+@media (max-width: 767px) {
+    .input__categories {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
 </style>

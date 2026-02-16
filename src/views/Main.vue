@@ -69,7 +69,7 @@ const currentCategoryItemList = computed(() => {
 
 <style scoped>
 .main {
-    padding: 0 0 32px 0;
+    padding: var(--main-padding, 0 16px 32px);
 }
 
 .container {
@@ -80,9 +80,8 @@ const currentCategoryItemList = computed(() => {
     border-radius: 20px;
     background-color: var(--primary-color);
     flex-grow: 1;
-    width: 1140px;
+    width: 100%;
 }
-
 
 .content {
     display: grid;
@@ -93,5 +92,15 @@ const currentCategoryItemList = computed(() => {
 
 .content--list {
     grid-template-columns: initial;
+}
+
+@media(max-width: 767px) {
+    .main {
+        --main-padding: 0 16px 32px;
+    }
+    
+    .content {
+        grid-template-columns: auto;
+    }
 }
 </style>

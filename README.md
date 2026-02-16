@@ -42,8 +42,16 @@
 - [x] Add navigation on button click
 - [x] Add banner navigation actions
 - [x] Fill correct data and text
-- [ ] Add mobile versions
-- [ ] Demo MVP
+- [x] Add mobile versions
+- [x] Demo MVP
+
+
+## Important tasks
+- [ ] Add custom domaion
+- [ ] Add GTM
+
+
+## Aditional tasks
 - [ ] Add card edit
 - [ ] Add remove on main list
 - [ ] Add edit on main list

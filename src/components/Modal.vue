@@ -40,7 +40,7 @@ const props = defineProps({
 }
 
 .modal-container {
-    width: 540px;
+    width: var(--modal-container-width, 540px);
     margin: auto;
     padding: 20px 30px;
     background-color: var(--primary-bg-color);
@@ -83,5 +83,11 @@ const props = defineProps({
     padding: 12px;
     border-radius: 4px;
     background: var(--secondary-color);
+}
+
+@media (max-width: 539px) {
+    .modal-mask {
+        --modal-container-width: 360px;
+    }
 }
 </style>

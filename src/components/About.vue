@@ -34,12 +34,13 @@
 }
 
 .banner__title {
-    font-size: 32px;
+    font-size: var(--banner-title, 32px);
     font-weight: 400;
+    text-align: center;
 }
 
 .banner__subtitle {
-    font-size: 16px;
+    font-size: var(--banner-subtitle, 16px);
     font-weight: 400;
     max-width: 80vw;
     text-align: center;
@@ -59,5 +60,18 @@
     padding: 8px;
     border-radius: 8px;
     background-color: var(--primary-color);
+}
+
+
+
+@media (max-width: 767px) {
+    .banner {
+        --banner-title: 24px;
+        --banner-subtitle: 12px;
+    }
+
+    .banner__subtitle {
+        text-align: center;
+    }
 }
 </style>

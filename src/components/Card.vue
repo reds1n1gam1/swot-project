@@ -133,5 +133,6 @@ function closeCardDescription() {
 
 .card--plus {
     background-color: var(--primary-bg-color);
+    padding: 16px;
 }
 </style>
