@@ -52,6 +52,7 @@
 
 
 ## Aditional tasks
+- [ ] Connect AI API (?)
 - [ ] Add card edit
 - [ ] Add remove on main list
 - [ ] Add edit on main list
