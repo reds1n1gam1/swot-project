@@ -47,7 +47,7 @@
 
 
 ## Important tasks
-- [ ] Add custom domaion
+- [x] Add custom domaion
 - [ ] Add GTM
 
 
