@@ -4,7 +4,8 @@
         <div class="footer__subtitle">Have questions or suggestions? We’d love to hear from you.</div>
         <ul class="footer__links">
             <li>Email: <a href="mailto:madisaginaliyev@gmail.com">madisaginaliyev@gmail.com</a></li>
-            <li>Github: <a href="github.com/reds1n1gam1/swot-project">github.com/reds1n1gam1/swot-project</a></li>
+            <li>Github: <a href="https://github.com/reds1n1gam1/swot-project/tree/main?tab=readme-ov-file"
+                    target="_blank">github.com/reds1n1gam1/swot-project</a></li>
         </ul>
         <div class="footer__bottom">
             <p class="footer__text">SWOT Tool</p>
