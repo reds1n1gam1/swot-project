@@ -110,6 +110,10 @@ function closeCardDescription() {
     background-color: var(--card-color);
 }
 
+.card:active {
+    transform: scale(1.1);
+}
+
 .card--0 {
     --card-color: var(--strength-color);
 }
