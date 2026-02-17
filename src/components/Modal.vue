@@ -36,7 +36,8 @@ const props = defineProps({
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
     display: flex;
-    transition: opacity 0.3s ease;
+    transform: translateZ(0);
+    /* transition: opacity 0.3s ease; */
 }
 
 .modal-container {
@@ -46,7 +47,7 @@ const props = defineProps({
     background-color: var(--primary-bg-color);
     border-radius: 2px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.33);
-    transition: all 0.3s ease;
+    /* transition: all 0.3s ease; */
 }
 
 .modal-header h3 {
