@@ -106,10 +106,11 @@ function clearInput() {
 }
 
 .input__option {
-    opacity: 1;
     position: absolute;
     inset: 0;
-    opacity: 0;
+    opacity: 0.01;
+    -webkit-appearance: none;
+    appearance: none;
     z-index: 2;
     cursor: pointer;
 }
