@@ -27,7 +27,9 @@
             <modal :show="appStore.showInputModal" @close="appStore.setInputModalState(false)">
                 <template #header> Add new item </template>
                 <template #body>
-                    <Input />
+                    <div>
+                        <Input />
+                    </div>
                 </template>
             </modal>
         </Teleport>
