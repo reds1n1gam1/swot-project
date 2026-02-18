@@ -36,13 +36,13 @@ import { useCardStore } from '../store/card-store'
 const cardStore = useCardStore()
 
 let inputText = ref('')
-let inputType = 0
+let inputType = ref(0)
 
 function addNewItem() {
     if (inputText) {
 
         cardStore.addCard({
-            type: inputType,
+            type: inputType.value,
             text: inputText.value,
         })
 
