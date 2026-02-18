@@ -17,6 +17,7 @@
         <div class="card card--plus" @click="appStore.setInputModalState(true)">
             <i class="fa-solid fa-plus"></i>
         </div>
+        <button @click="appStore.setInputModalState(true)">Open</button>
     </template>
 
     <Teleport to="body">
