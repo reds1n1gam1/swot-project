@@ -21,7 +21,7 @@
 
         <Footer></Footer>
 
-        <Teleport to="body">
+        <Teleport defer to="body">
             <modal :show="appStore.showInputModal" @close="appStore.setInputModalState(false)">
                 <template #header> Add new item </template>
                 <template #body>

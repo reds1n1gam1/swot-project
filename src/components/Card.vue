@@ -17,10 +17,9 @@
         <div class="card card--plus" @click="appStore.setInputModalState(true)">
             <i class="fa-solid fa-plus"></i>
         </div>
-        <button @click="appStore.setInputModalState(true)">Open</button>
     </template>
 
-    <Teleport to="body">
+    <Teleport defer to="body">
         <modal :show="appStore.showCardModal" @close="closeCardDescription">
             <template #body>
                 <div :class="'card card--' + appStore.selectedCardToShow?.type">
