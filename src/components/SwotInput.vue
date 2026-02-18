@@ -110,6 +110,7 @@ function clearInput() {
     position: absolute;
     inset: 0;
     opacity: 0;
+    z-index: 2;
     cursor: pointer;
 }
 
