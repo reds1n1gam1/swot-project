@@ -21,9 +21,8 @@
 
         <Footer></Footer>
 
-        <div id="teleports"></div>
 
-        <Teleport to="#teleports">
+        <Teleport to="body">
             <modal :show="appStore.showInputModal" @close="appStore.setInputModalState(false)">
                 <template #header> Add new item </template>
                 <template #body>
@@ -41,7 +40,7 @@
 import { computed } from 'vue'
 
 import Header from "../components/Header.vue"
-import SwotInput from "../components/Input.vue"
+import SwotInput from "../components/SwotInput.vue"
 import Sidebar from "../components/Sidebar.vue"
 import Card from "../components/Card.vue"
 import AllListView from "../components/AllList.vue"
