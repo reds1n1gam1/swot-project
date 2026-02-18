@@ -19,7 +19,7 @@
         </div>
     </template>
 
-    <Teleport to="main">
+    <Teleport to="#teleports">
         <modal :show="appStore.showCardModal" @close="closeCardDescription">
             <template #body>
                 <div :class="'card card--' + appStore.selectedCardToShow?.type">
