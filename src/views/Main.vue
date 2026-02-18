@@ -21,11 +21,20 @@
 
         <Footer></Footer>
 
-        <Teleport defer to="body">
+        <Teleport to="main">
             <modal :show="appStore.showInputModal" @close="appStore.setInputModalState(false)">
                 <template #header> Add new item </template>
                 <template #body>
                     <Input />
+                </template>
+            </modal>
+        </Teleport>
+
+        <Teleport to="body">
+            <modal :show="appStore.showInputModal" @close="appStore.setInputModalState(false)">
+                <template #header> Add new item </template>
+                <template #body>
+                    Test
                 </template>
             </modal>
         </Teleport>
