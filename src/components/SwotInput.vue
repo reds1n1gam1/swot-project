@@ -1,23 +1,23 @@
 <template>
     <div class="input">
         <div class="input__categories">
-            <div class="input__category-item">
+            <div class="input__category-item" :class="{ 'input__category-item--active': inputType == 0 }">
                 <input class="input__option" type="radio" name="swot" id="Strength" :value="0" v-model="inputType" />
                 <i class="fa-solid fa-dumbbell"></i>
             </div>
 
-            <div class="input__category-item">
+            <div class="input__category-item" :class="{ 'input__category-item--active': inputType == 1 }">
                 <input class="input__option" type="radio" name="swot" id="Weakness" :value="1" v-model="inputType" />
                 <i class="fa-solid fa-cloud-rain"></i>
             </div>
 
-            <div class="input__category-item">
+            <div class="input__category-item" :class="{ 'input__category-item--active': inputType == 2 }">
                 <input class="input__option" type="radio" name="swot" id="Opportunites" :value="2"
                     v-model="inputType" />
                 <i class="fa-solid fa-mountain"></i>
             </div>
 
-            <div class="input__category-item">
+            <div class="input__category-item" :class="{ 'input__category-item--active': inputType == 3 }">
                 <input class="input__option" type="radio" name="swot" id="Threats" :value="3" v-model="inputType" />
                 <i class="fa-solid fa-cloud-bolt"></i>
             </div>
@@ -101,7 +101,7 @@ function clearInput() {
     transition: background-color 200ms ease-in-out;
 }
 
-.input__category-item:has(.input__option:checked) {
+.input__category-item--active {
     background-color: var(--primary-color);
 }
 
