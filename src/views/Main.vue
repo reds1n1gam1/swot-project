@@ -28,7 +28,7 @@
                 <template #header> Add new item </template>
                 <template #body>
                     <div>
-                        <Input />
+                        <SwotInput />
                     </div>
                 </template>
             </modal>
@@ -41,7 +41,7 @@
 import { computed } from 'vue'
 
 import Header from "../components/Header.vue"
-import Input from "../components/Input.vue"
+import SwotInput from "../components/Input.vue"
 import Sidebar from "../components/Sidebar.vue"
 import Card from "../components/Card.vue"
 import AllListView from "../components/AllList.vue"
