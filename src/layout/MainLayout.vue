@@ -1,7 +1,6 @@
 <template>
     <div class="main">
         <Navigation></Navigation>
-        <MainBanner></MainBanner>
 
         <div class="container" id="tool">
             <slot name="body"></slot>
@@ -14,7 +13,6 @@
 </template>
 
 <script setup lang="ts">
-import MainBanner from '../components/MainBanner.vue'
 import Footer from '../components/Footer.vue'
 import Navigation from '../components/Navigation.vue'
 </script>

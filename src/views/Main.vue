@@ -1,6 +1,8 @@
 <template>
     <MainLayout>
         <template #body>
+            <MainBanner></MainBanner>
+
             <div class="container" id="tool">
                 <Sidebar />
                 <Header />
@@ -36,6 +38,7 @@
 
 import { computed } from 'vue'
 
+import MainBanner from '../components/MainBanner.vue'
 import Header from "../components/Header.vue"
 import SwotInput from "../components/SwotInput.vue"
 import Sidebar from "../components/Sidebar.vue"
