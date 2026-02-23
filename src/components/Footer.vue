@@ -3,6 +3,20 @@
         <div class="footer__title">SWOT Tool</div>
         <div class="footer__subtitle">Have questions or suggestions? We’d love to hear from you.</div>
         <ul class="footer__links">
+
+            <li>
+                <RouterLink to="/about">About</RouterLink>
+            </li>
+            <li>
+                <RouterLink to="/privacy">Privacy</RouterLink>
+            </li>
+            <li>
+                <RouterLink to="/contact">Contact</RouterLink>
+            </li>
+            <li>
+                <RouterLink to="/terms-of-service">Terms of service</RouterLink>
+            </li>
+
             <li>Email: <a href="mailto:madisaginaliyev@gmail.com">madisaginaliyev@gmail.com</a></li>
             <li>Github: <a href="https://github.com/reds1n1gam1/swot-project/tree/main?tab=readme-ov-file"
                     target="_blank">github.com/reds1n1gam1/swot-project</a></li>

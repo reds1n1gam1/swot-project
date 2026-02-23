@@ -16,8 +16,6 @@
                     <Card :type="CardComponentTypes.Add" />
                 </div>
             </div>
-
-            <About></About>
         </template>
     </MainLayout>
 
@@ -48,7 +46,6 @@ import Modal from "../layout/Modal.vue"
 import { useCardStore } from '../store/card-store'
 import { useAppStore } from '../store/app-store'
 import { CardComponentTypes } from '../types/card'
-import About from '../components/About.vue'
 import MainLayout from '../layout/MainLayout.vue'
 
 const cardStore = useCardStore()

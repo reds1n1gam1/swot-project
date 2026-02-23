@@ -1,17 +1,20 @@
 <template>
     <MainLayout>
         <template #body>
-            Terms of Service
+            <div class="info-page">
+                <h1>Terms of Service</h1>
 
-            This website is provided as a free tool for informational and planning purposes only.
+                <p>This website is provided as a free tool for informational and planning purposes only.</p>
 
-            We do not guarantee accuracy, completeness, or suitability of any results produced using this tool.
+                <p>We do not guarantee accuracy, completeness, or suitability of any results produced using this tool.
+                </p>
 
-            Users are responsible for their own decisions based on the information they enter.
+                <p>Users are responsible for their own decisions based on the information they enter.</p>
 
-            We may update or modify the service at any time without notice.
+                <p>We may update or modify the service at any time without notice.</p>
 
-            By using this website, you agree to these terms.
+                <p>By using this website, you agree to these terms.</p>
+            </div>
         </template>
     </MainLayout>
 </template>

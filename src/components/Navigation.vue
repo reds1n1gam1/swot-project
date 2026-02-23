@@ -6,10 +6,11 @@
         <nav class="menu__items">
             <ul class="menu__list">
                 <li><a href="/">Main</a></li>
-                <li><a href="#tool">Tool</a></li>
-                <li><a href="#information">Information</a></li>
+                <li><a href="#tool">Tool</a></li> <li>
+                    <RouterLink to="/about">About</RouterLink>
+                </li>
                 <li>
-                    <RouterLink to="privacy">Privacy</RouterLink>
+                    <RouterLink to="/how-to-use">How to use</RouterLink>
                 </li>
             </ul>
         </nav>

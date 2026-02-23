@@ -19,6 +19,8 @@ import Navigation from '../components/Navigation.vue'
 
 <style scoped>
 .main {
+    width: 100%;
+    min-width: 100vh;
     padding: var(--main-padding, 0 16px 32px);
 }
 

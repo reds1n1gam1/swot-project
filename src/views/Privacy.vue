@@ -1,69 +1,76 @@
 <template>
     <MainLayout>
         <template #body>
-            Privacy Policy
+            <div class="info-page">
+                <h1>Privacy Policy</h1>
 
-            This website provides an online SWOT analysis tool that allows users to create and manage strategic planning
-            notes directly in their browser.
+                <p>This website provides an online SWOT analysis tool that allows users to create and manage strategic
+                    planning notes directly in their browser.</p>
 
-            We respect your privacy and are committed to protecting your data.
+                <p>We respect your privacy and are committed to protecting your data.</p>
 
-            Information We Collect
+                <p>Information We Collect</p>
 
-            We do not require account registration and do not collect personal information such as name, address, or
-            phone number.
+                <p>We do not require account registration and do not collect personal information such as name, address,
+                    or phone number.</p>
 
-            However, certain technical data may be automatically collected, including:
+                <p>However, certain technical data may be automatically collected, including:</p>
+                <ul>
 
-            IP address
+                    <li>IP address</li>
 
-            device and browser type
+                    <li>device and browser type</li>
 
-            pages visited
+                    <li>pages visited</li>
 
-            approximate location (country level)
+                    <li>approximate location (country level)</li>
 
-            interaction with the website
+                    <li>interaction with the website</li>
 
-            This information is used only to improve the functionality and reliability of the service.
+                    <li>This information is used only to improve the functionality and reliability of the service.</li>
 
-            Cookies and Advertising
+                    <li>Cookies and Advertising</li>
+                </ul>
 
-            This website may use cookies and similar technologies to:
+                <p>This website may use cookies and similar technologies to:</p>
 
-            remember preferences
+                <ul>
+                    <li>remember preferences</li>
 
-            analyze traffic
+                    <li>analyze traffic</li>
 
-            display relevant advertisements
+                    <li>display relevant advertisements</li>
 
-            Third-party vendors, including Google, may use cookies to serve ads based on previous visits to this or
-            other websites.
+                    <li>Third-party vendors, including Google, may use cookies to serve ads based on previous visits to
+                        this or other websites.</li>
+                </ul>
 
-            Google’s advertising cookies enable it and its partners to serve ads based on user visits.
-            Users may opt out of personalized advertising by visiting:
+                <p>Google’s advertising cookies enable it and its partners to serve ads based on user visits.</p>
+                <p>Users may opt out of personalized advertising by visiting:</p>
 
-            https://www.google.com/settings/ads
+                <p><a href="https://www.google.com/settings/ads">https://www.google.com/settings/ads</a></p>
 
-            Third-Party Services
+                <p>Third-Party Services</p>
 
-            We may use trusted third-party services such as:
+                <p>We may use trusted third-party services such as:</p>
 
-            Google Analytics
+                <p>Google Analytics</p>
 
-            Google AdSense
+                <p>Google AdSense</p>
 
-            These services may collect anonymized usage data in accordance with their own privacy policies.
+                <p>These services may collect anonymized usage data in accordance with their own privacy policies.</p>
 
-            Data Storage
+                <p>Data Storage</p>
 
-            Any data you enter into the SWOT tool is stored locally in your browser unless otherwise stated.
-            We do not store or process your personal project data on our servers.
+                <p>Any data you enter into the SWOT tool is stored locally in your browser unless otherwise stated. We
+                    do not store or process your personal project data on our servers.</p>
 
-            Contact
+                <p>Contact</p>
 
-            If you have questions about this Privacy Policy, please contact:
-            contact@yourdomain.com
+                <p>If you have questions about this Privacy Policy, please contact: <a
+                        href="mailto:madisaginaliyev@gmail.com">madisaginaliyev@gmail.com</a></p>
+
+            </div>
         </template>
     </MainLayout>
 </template>
