@@ -8,6 +8,9 @@
                 <li><a href="/">Main</a></li>
                 <li><a href="#tool">Tool</a></li>
                 <li><a href="#information">Information</a></li>
+                <li>
+                    <RouterLink to="privacy">Privacy</RouterLink>
+                </li>
             </ul>
         </nav>
         <span></span>

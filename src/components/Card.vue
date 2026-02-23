@@ -35,7 +35,7 @@
 import { useAppStore } from '../store/app-store';
 import { useCardStore } from '../store/card-store';
 import { CardComponentTypes, type Card } from '../types/card';
-import Modal from "../components/Modal.vue"
+import Modal from "../layout/Modal.vue"
 
 const appStore = useAppStore()
 const cardStore = useCardStore()

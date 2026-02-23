@@ -1,38 +1,35 @@
 <template>
-    <div class="main">
-        <Navigation></Navigation>
-        <MainBanner></MainBanner>
+    <MainLayout>
+        <template #body>
+            <div class="container" id="tool">
+                <Sidebar />
+                <Header />
 
-        <div class="container" id="tool">
-            <Sidebar />
-            <Header />
+                <div class="content content--list" v-if="appStore.allListView">
+                    <AllListView />
+                </div>
 
-            <div class="content content--list" v-if="appStore.allListView">
-                <AllListView />
+                <div class="content" v-else>
+                    <Card v-for="card in currentCategoryItemList" :card="card" :type="CardComponentTypes.Card" />
+                    <Card :type="CardComponentTypes.Add" />
+                </div>
             </div>
 
-            <div class="content" v-else>
-                <Card v-for="card in currentCategoryItemList" :card="card" :type="CardComponentTypes.Card" />
-                <Card :type="CardComponentTypes.Add" />
-            </div>
-        </div>
-
-        <About></About>
-
-        <Footer></Footer>
+            <About></About>
+        </template>
+    </MainLayout>
 
 
-        <Teleport to="body">
-            <modal :show="appStore.showInputModal" @close="appStore.setInputModalState(false)">
-                <template #header> Add new item </template>
-                <template #body>
-                    <div>
-                        <SwotInput />
-                    </div>
-                </template>
-            </modal>
-        </Teleport>
-    </div>
+    <Teleport to="body">
+        <modal :show="appStore.showInputModal" @close="appStore.setInputModalState(false)">
+            <template #header> Add new item </template>
+            <template #body>
+                <div>
+                    <SwotInput />
+                </div>
+            </template>
+        </modal>
+    </Teleport>
 </template>
 
 <script setup lang="ts">
@@ -44,14 +41,12 @@ import SwotInput from "../components/SwotInput.vue"
 import Sidebar from "../components/Sidebar.vue"
 import Card from "../components/Card.vue"
 import AllListView from "../components/AllList.vue"
-import Modal from "../components/Modal.vue"
+import Modal from "../layout/Modal.vue"
 import { useCardStore } from '../store/card-store'
 import { useAppStore } from '../store/app-store'
 import { CardComponentTypes } from '../types/card'
-import MainBanner from '../components/MainBanner.vue'
-import Footer from '../components/Footer.vue'
-import Navigation from '../components/Navigation.vue'
 import About from '../components/About.vue'
+import MainLayout from '../layout/MainLayout.vue'
 
 const cardStore = useCardStore()
 const appStore = useAppStore()
@@ -71,10 +66,6 @@ const currentCategoryItemList = computed(() => {
 </script>
 
 <style scoped>
-.main {
-    padding: var(--main-padding, 0 16px 32px);
-}
-
 .container {
     display: grid;
     grid-template-columns: auto 1fr;
@@ -98,10 +89,6 @@ const currentCategoryItemList = computed(() => {
 }
 
 @media(max-width: 767px) {
-    .main {
-        --main-padding: 0 16px 32px;
-    }
-
     .content {
         grid-template-columns: auto;
     }
