@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: http://swot-online.com/sitemap.xml
