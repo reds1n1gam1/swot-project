@@ -3,7 +3,7 @@
         <template #body>
             <MainBanner></MainBanner>
 
-            <div class="container" id="tool">
+            <div class="tool">
                 <Sidebar />
                 <Header />
 
@@ -66,14 +66,13 @@ const currentCategoryItemList = computed(() => {
 </script>
 
 <style scoped>
-.container {
+.tool {
     display: grid;
     grid-template-columns: auto 1fr;
     gap: 16px;
     padding: 24px;
     border-radius: 20px;
     background-color: var(--primary-color);
-    flex-grow: 1;
     width: 100%;
 }
 
