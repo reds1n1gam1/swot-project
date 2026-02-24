@@ -50,6 +50,10 @@
 - [x] Add custom domaion
 - [x] Add GTM
 
+## Additional
+- [x] Add service pages
+- [ ] Add translation
+
 
 ## Aditional tasks
 - [ ] Connect AI API (?)
