@@ -5,8 +5,15 @@
         </div>
 
         <div class="header__right">
-            <button type="button" title="Clear all" class="header__clear" v-on:click="cardStore.resetCards()"><i
-                    class="fa-solid fa-trash"></i></button>
+
+            <button type="button" title="Add new item" class="header__clear"
+                v-on:click="appStore.setInputModalState(true)">
+                <i class="fa-solid fa-plus"></i>
+            </button>
+
+            <button type="button" title="Clear all" class="header__clear" v-on:click="cardStore.resetCards()">
+                <i class="fa-solid fa-trash"></i>
+            </button>
         </div>
 
     </header>
@@ -58,5 +65,12 @@ const mainTitle = computed(() => {
     font-size: 16px;
     border-radius: 8px;
     cursor: pointer;
+}
+
+
+.header__right {
+    display: grid;
+    grid-auto-flow: column;
+    gap: 12px;
 }
 </style>

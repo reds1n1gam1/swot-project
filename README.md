@@ -52,6 +52,7 @@
 
 ## Additional
 - [x] Add service pages
+- [x] Add button to main list
 - [ ] Add translation
 
 
