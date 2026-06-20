@@ -48,25 +48,41 @@
                     <div class="overflow-y-auto">
                         <ul class="list-none p-4 m-0">
                             <li>
-                                <div
-                                    v-ripple
-                                    v-styleclass="{
-                                        selector: '@next',
-                                        enterFromClass: 'hidden',
-                                        enterActiveClass: 'animate-slidedown',
-                                        leaveToClass: 'hidden',
-                                        leaveActiveClass: 'animate-slideup'
-                                    }"
-                                    class="p-4 flex items-center justify-between text-surface-500 dark:text-surface-400 cursor-pointer p-ripple"
-                                >
-                                    <span class="font-medium">FAVORITES</span>
-                                    <i class="pi pi-chevron-down"></i>
-                                </div>
                                 <ul class="list-none p-0 m-0 overflow-hidden">
                                     <li>
                                         <a v-ripple class="flex items-center cursor-pointer p-4 rounded text-surface-700 hover:bg-surface-100 dark:text-surface-0 dark:hover:bg-surface-800 duration-150 transition-colors p-ripple">
                                             <i class="pi pi-home mr-2"></i>
                                             <span class="font-medium">Dashboard</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a v-ripple class="flex items-center cursor-pointer p-4 rounded text-surface-700 hover:bg-surface-100 dark:text-surface-0 dark:hover:bg-surface-800 duration-150 transition-colors p-ripple">
+                                            <i class="pi pi-home mr-2"></i>
+                                            <span class="font-medium">About</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a v-ripple class="flex items-center cursor-pointer p-4 rounded text-surface-700 hover:bg-surface-100 dark:text-surface-0 dark:hover:bg-surface-800 duration-150 transition-colors p-ripple">
+                                            <i class="pi pi-home mr-2"></i>
+                                            <span class="font-medium">Contact</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a v-ripple class="flex items-center cursor-pointer p-4 rounded text-surface-700 hover:bg-surface-100 dark:text-surface-0 dark:hover:bg-surface-800 duration-150 transition-colors p-ripple">
+                                            <i class="pi pi-home mr-2"></i>
+                                            <span class="font-medium">How to use</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a v-ripple class="flex items-center cursor-pointer p-4 rounded text-surface-700 hover:bg-surface-100 dark:text-surface-0 dark:hover:bg-surface-800 duration-150 transition-colors p-ripple">
+                                            <i class="pi pi-home mr-2"></i>
+                                            <span class="font-medium">Privacy</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a v-ripple class="flex items-center cursor-pointer p-4 rounded text-surface-700 hover:bg-surface-100 dark:text-surface-0 dark:hover:bg-surface-800 duration-150 transition-colors p-ripple">
+                                            <i class="pi pi-home mr-2"></i>
+                                            <span class="font-medium">Terms</span>
                                         </a>
                                     </li>
                                 </ul>
