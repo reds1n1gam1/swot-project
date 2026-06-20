@@ -1,5 +1,5 @@
 <template>
-    <div class="main">
+    <div class="main w-full">
         <Navigation></Navigation>
 
         <div class="container mx-auto" id="tool">
