@@ -1,7 +1,7 @@
 <template>
     <MainLayout>
         <template #body>
-            <div class="grid grid-cols-5">
+            <div class="grid grid-cols-5 gap-4 p-6">
                 <div class="col-span-2 grid gap-4">
                     <AnalysisDetails/>
                     <AddCriteria/>
