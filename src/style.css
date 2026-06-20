@@ -1,3 +1,6 @@
+@import "tailwindcss";
+@import "tailwindcss-primeui";
+
 *,
 *::before,
 *::after {
@@ -63,11 +66,6 @@ h6 {
 }
 
 :root {
-  --primary-color: #232b41;
-  --secondary-color: #1a2037;
-
-  --primary-bg-color: #2f3651;
-
   --strength-color: #22c55e;
   --weak-color: #f97316;
   --opport-color: #3b82f6;
@@ -78,21 +76,14 @@ h6 {
   font-weight: 400;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-button {
-  border: initial;
-}
-
 * {
-  color: #9299c0;
+  color: #000;
 }
 
 main {
@@ -100,7 +91,6 @@ main {
   justify-content: center;
   align-items: start;
   min-height: 100vh;
-  background-color: var(--secondary-color);
 }
 
 .info-page {
