@@ -1,8 +1,8 @@
 <template>
-    <div class="main w-full">
+    <div class="w-full">
         <Navigation></Navigation>
 
-        <div class="container mx-auto" id="tool">
+        <div class="container mx-auto">
             <slot name="body"></slot>
         </div>
 
