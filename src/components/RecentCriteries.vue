@@ -8,8 +8,22 @@
         <div class="card">
             <DataTable :value="factorsList" tableStyle="">
                 <Column field="title" header="Title"></Column>
-                <Column field="type" header="Type"></Column>
-                <Column field="priority" header="Quantity"></Column>
+                <Column field="type" header="Type">
+                    <template #body="{ data }">
+                        <Tag v-if="data.type === Factor.Strengths" severity="success" value="Strengths"></Tag>
+                        <Tag v-if="data.type === Factor.Weaknesses" severity="warn" value="Weaknesses"></Tag>
+                        <Tag v-if="data.type === Factor.Opportunities" severity="info" value="Opportunities"></Tag>
+                        <Tag  v-if="data.type === Factor.Threats"severity="danger" value="Threats"></Tag>
+                    </template>
+                </Column>
+                <Column field="priority" header="Quantity">
+                    <template #body="{ data }">
+                        <Tag v-if="data.priority === Priority.Low" severity="success" value="Low"></Tag>
+                        <Tag v-if="data.priority === Priority.Medium" severity="warn" value="Medium"></Tag>
+                        <Tag v-if="data.priority === Priority.High" severity="danger" value="High"></Tag>
+
+                    </template>
+                </Column>
                 <Column>
                     <template #body="{ data }">
                         <Button icon="pi pi-pen-to-square" @click="editRow(data)" severity="secondary" rounded></Button>
@@ -23,7 +37,8 @@
                 </Column>
             </DataTable>
 
-            <Button type="button" :label="'View all criteria(' + store.getFactorsLength + ')'" icon="pi pi-arrow-right" class="w-full" />
+            <Button type="button" :label="'View all criteria(' + store.getFactorsLength + ')'" icon="pi pi-arrow-right"
+                class="w-full" />
 
         </div>
     </div>
@@ -36,16 +51,19 @@ import { onMounted, ref, type Ref } from 'vue';
 import type { FactorItem } from '../types/FactorItem';
 import { useFactorsStore } from '../store/factors-store';
 import { Button } from 'primevue';
+import Tag from 'primevue/tag';
+import { Priority } from '../types/PriorityType';
+import { Factor } from '../types/FactorType';
 
 const store = useFactorsStore()
 
-const factorsList: Ref<FactorItem[]>= ref([]);
+const factorsList: Ref<FactorItem[]> = ref([]);
 
-function editRow(data:FactorItem) {
+function editRow(data: FactorItem) {
 
 }
 
-function removeRow(data:FactorItem) {
+function removeRow(data: FactorItem) {
 
 }
 
