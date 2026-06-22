@@ -18,7 +18,7 @@
     </div>
 
     <div class="card flex justify-center">
-        <SelectButton v-model="form.priority" :options="priorities" optionLabel="name" multiple aria-labelledby="multiple" />
+        <SelectButton v-model="form.priority" :options="priorities" optionLabel="name" />
     </div>
 
     <Button label="Add criteria" icon="pi pi-plus" />

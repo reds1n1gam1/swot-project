@@ -11,8 +11,8 @@
             <template #end>
                 <div class="flex items-center gap-6">
                     <ButtonGroup>
-                        <Button label="Edit mode" icon="pi pi-pencil" severity="primary" />
-                        <Button label="Presentation mode" icon="pi pi-desktop" severity="secondary" />
+                        <Button size="small" label="Edit mode" icon="pi pi-pencil" severity="primary" />
+                        <Button size="small" label="Presentation mode" icon="pi pi-desktop" severity="secondary" />
                     </ButtonGroup>
                     <Button icon="pi pi-plus" size="small" label="New analysis"></Button>
                 </div>
