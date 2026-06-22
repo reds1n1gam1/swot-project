@@ -6,4 +6,5 @@ export interface FactorItem {
   title: string;
   type: FactorType;
   priority: PriorityType;
+  dateAdded: Date,
 }

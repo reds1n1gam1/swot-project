@@ -29,15 +29,16 @@
 <script setup lang="ts">
 import DataTable from 'primevue/datatable';
 import Column from 'primevue/column';
-import { ref } from 'vue';
+import { ref, type Ref } from 'vue';
+import type { FactorItem } from '../types/FactorItem';
 
-const listItem = ref();
+const listItem: Ref<FactorItem[]>= ref([]);
 
-function editRow(data:unknown) {
+function editRow(data:FactorItem) {
 
 }
 
-function removeRow(data:unknown) {
+function removeRow(data:FactorItem) {
 
 }
 </script>
