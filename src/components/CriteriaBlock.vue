@@ -3,10 +3,9 @@
         <div class="card__header flex flex justify-center items-center gap-3 p-4 border-b-1 border-gray-200">
             <div class="card__icon p-2 rounded-full flex justify-center items-center">
                 <i v-if="type === Factor.Strengths" class="pi pi-shield" style="font-size: 1.5rem"></i>
-
-            <i  v-if="type === Factor.Weaknesses" class="pi pi-exclamation-triangle"  style="font-size: 1.5rem"></i>
-            <i  v-if="type === Factor.Opportunities" class="pi pi-angle-double-up"  style="font-size: 1.5rem"></i>
-            <i  v-if="type === Factor.Threats" class="pi pi-lock"  style="font-size: 1.5rem"></i>
+                <i v-if="type === Factor.Weaknesses" class="pi pi-exclamation-triangle" style="font-size: 1.5rem"></i>
+                <i v-if="type === Factor.Opportunities" class="pi pi-angle-double-up" style="font-size: 1.5rem"></i>
+                <i v-if="type === Factor.Threats" class="pi pi-lock" style="font-size: 1.5rem"></i>
             </div>
             <p class="flex-grow text-left capitalize font-semibold"> {{ type }} </p>
             <div
@@ -15,7 +14,8 @@
         </div>
         <div class="px-6 py-8">
             <ul class="card__list list-disc list-inside  grid gap-6">
-                <li class=" text-sm text-gray-800 font-medium" v-for="(item, index) in factors" :key="index"> {{ item.title }} </li>
+                <li class=" text-sm text-gray-800 font-medium" v-for="(item, index) in factors" :key="index"> {{
+                    item.title }} </li>
             </ul>
         </div>
         <div class=" px-2 py-4 border-t-1 border-gray-200">
@@ -71,7 +71,7 @@ onMounted(() => {
     }
 
     &__action {
-        color: var(--sw-color-500) 
+        color: var(--sw-color-500)
     }
 
     &--STRENGTHS {
@@ -79,21 +79,22 @@ onMounted(() => {
         --sw-color-200: var(--color-green-200);
         --sw-color-50: var(--color-green-50);
     }
-    
+
     &--WEAKNESSES {
-        
+
         --sw-color-500: var(--color-yellow-500);
         --sw-color-200: var(--color-yellow-200);
         --sw-color-50: var(--color-yellow-50);
     }
-    
+
     &--OPPORTUNITIES {
-        
+
         --sw-color-500: var(--color-blue-500);
         --sw-color-200: var(--color-blue-200);
         --sw-color-50: var(--color-blue-50);
-        
+
     }
+
     &--THREATS {
         --sw-color-500: var(--color-red-500);
         --sw-color-200: var(--color-red-200);
