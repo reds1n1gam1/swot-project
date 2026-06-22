@@ -1,6 +1,6 @@
 import { defineStore } from "pinia";
 import type { FactorItem } from "../types/FactorItem";
-import { Factor } from "../types/FactorType";
+import { Factor, type FactorType } from "../types/FactorType";
 import { Priority } from "../types/PriorityType";
 
 interface FactorsStore {
@@ -12,9 +12,14 @@ export const useFactorsStore = defineStore("counter", {
   getters: {
     getAllFactors: (state) => state.factors,
     getRecentFactors: (state) => {
-        return state.factors.sort((a,b) => a.dateAdded.getTime() - b.dateAdded.getTime()).slice(0,5)
+      return state.factors
+        .sort((a, b) => a.dateAdded.getTime() - b.dateAdded.getTime())
+        .slice(0, 5);
     },
-    getFactorsLength: (state) => state.factors.length
+    getFactorsLength: (state) => state.factors.length,
+    getByType: (state) => {
+      return (type: FactorType) => state.factors.filter((item) => item.type === type)
+    },
   },
   actions: {
     addNewItem(item: FactorItem) {
@@ -26,90 +31,89 @@ export const useFactorsStore = defineStore("counter", {
   },
 });
 
-
 export const FACTORS_MOCK: FactorItem[] = [
   {
     id: 1,
-    title: 'Strong technical background',
+    title: "Strong technical background",
     type: Factor.Strengths,
     priority: Priority.High,
-    dateAdded: new Date('2026-06-01'),
+    dateAdded: new Date("2026-06-01"),
   },
   {
     id: 2,
-    title: 'Existing customer network',
+    title: "Existing customer network",
     type: Factor.Strengths,
     priority: Priority.Medium,
-    dateAdded: new Date('2026-06-02'),
+    dateAdded: new Date("2026-06-02"),
   },
   {
     id: 3,
-    title: 'Limited marketing experience',
+    title: "Limited marketing experience",
     type: Factor.Weaknesses,
     priority: Priority.High,
-    dateAdded: new Date('2026-06-03'),
+    dateAdded: new Date("2026-06-03"),
   },
   {
     id: 4,
-    title: 'Small initial budget',
+    title: "Small initial budget",
     type: Factor.Weaknesses,
     priority: Priority.Medium,
-    dateAdded: new Date('2026-06-04'),
+    dateAdded: new Date("2026-06-04"),
   },
   {
     id: 5,
-    title: 'Growing demand for AI tools',
+    title: "Growing demand for AI tools",
     type: Factor.Opportunities,
     priority: Priority.High,
-    dateAdded: new Date('2026-06-05'),
+    dateAdded: new Date("2026-06-05"),
   },
   {
     id: 6,
-    title: 'Expansion into international markets',
+    title: "Expansion into international markets",
     type: Factor.Opportunities,
     priority: Priority.Medium,
-    dateAdded: new Date('2026-06-06'),
+    dateAdded: new Date("2026-06-06"),
   },
   {
     id: 7,
-    title: 'Strong competition in the niche',
+    title: "Strong competition in the niche",
     type: Factor.Threats,
     priority: Priority.High,
-    dateAdded: new Date('2026-06-07'),
+    dateAdded: new Date("2026-06-07"),
   },
   {
     id: 8,
-    title: 'Economic uncertainty',
+    title: "Economic uncertainty",
     type: Factor.Threats,
     priority: Priority.Medium,
-    dateAdded: new Date('2026-06-08'),
+    dateAdded: new Date("2026-06-08"),
   },
   {
     id: 9,
-    title: 'Ability to build products quickly',
+    title: "Ability to build products quickly",
     type: Factor.Strengths,
     priority: Priority.High,
-    dateAdded: new Date('2026-06-09'),
+    dateAdded: new Date("2026-06-09"),
   },
   {
     id: 10,
-    title: 'Dependence on third-party services',
+    title: "Dependence on third-party services",
     type: Factor.Threats,
     priority: Priority.Low,
-    dateAdded: new Date('2026-06-10'),
+    dateAdded: new Date("2026-06-10"),
   },
   {
     id: 11,
-    title: 'Lack of brand recognition',
+    title: "Lack of brand recognition",
     type: Factor.Weaknesses,
     priority: Priority.Medium,
-    dateAdded: new Date('2026-06-11'),
+    dateAdded: new Date("2026-06-11"),
   },
   {
     id: 12,
-    title: 'Increasing adoption of SaaS solutions',
+    title: "Increasing adoption of SaaS solutions",
     type: Factor.Opportunities,
     priority: Priority.High,
-    dateAdded: new Date('2026-06-12'),
+    dateAdded: new Date("2026-06-12"),
   },
-]
+];
