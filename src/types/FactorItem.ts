@@ -7,4 +7,5 @@ export interface FactorItem {
   type: FactorType;
   priority: PriorityType;
   dateAdded: Date,
+  notes?: string,
 }

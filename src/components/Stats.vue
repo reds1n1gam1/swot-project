@@ -7,7 +7,7 @@
                 </div>
                 <div class="grid gap-2">
                     <p class="text-gray-500 text-medium">Total criteria</p>
-                    <p class="text-xl font-semibold"> {{ store.getFactorsLength }} </p>
+                    <p class="text-xl font-semibold"> {{ factorsLength }} </p>
                     <p class="text-gray-500 text-medium">Across all categories</p>
                 </div>
             </div>
@@ -40,7 +40,7 @@
                 </div>
                 <div class="grid gap-2">
                     <p class="text-gray-500 text-medium">High priority items</p>
-                    <p class="text-xl font-semibold"> {{ store.getHighPriorityItems.length }} </p>
+                    <p class="text-xl font-semibold"> {{ highPriiorityLength }} </p>
                     <p class="text-gray-500 text-medium">{{ highPriorityItemPercentage }}% of total criteria</p>
                 </div>
             </div>
@@ -56,8 +56,12 @@ import { useFactorsStore } from '../store/factors-store';
 const store = useFactorsStore()
 
 const highPriorityItemPercentage = computed(() => {
-    return (store.getHighPriorityItems?.length / store.getFactorsLength * 100).toFixed(2) 
+    return (store.getHighPriorityItems?.length / store.getFactorsLength * 100).toFixed(2)
 })
+
+const factorsLength = computed(() => store.getFactorsLength)
+
+const highPriiorityLength = computed(() => store.getHighPriorityItems.length)
 
 </script>
 

@@ -28,7 +28,7 @@
 <script setup lang="ts">
 import { Button } from 'primevue';
 import { Factor, type FactorType } from '../types/FactorType';
-import { onMounted, ref, type Ref } from 'vue';
+import { onMounted, ref, watch, type Ref } from 'vue';
 import type { FactorItem } from '../types/FactorItem';
 import { useFactorsStore } from '../store/factors-store';
 
@@ -42,6 +42,10 @@ const props = defineProps<{
 }>()
 
 onMounted(() => {
+    factors.value = factorsStore.getByType(props.type)
+})
+
+watch(factorsStore, () => {
     factors.value = factorsStore.getByType(props.type)
 })
 </script>
