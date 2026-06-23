@@ -7,7 +7,7 @@
                 </div>
                 <div class="grid gap-2">
                     <p class="text-gray-500 text-medium">Total criteria</p>
-                    <p class="text-xl font-semibold">11</p>
+                    <p class="text-xl font-semibold"> {{ store.getFactorsLength }} </p>
                     <p class="text-gray-500 text-medium">Across all categories</p>
                 </div>
             </div>
@@ -40,8 +40,8 @@
                 </div>
                 <div class="grid gap-2">
                     <p class="text-gray-500 text-medium">High priority items</p>
-                    <p class="text-xl font-semibold">4</p>
-                    <p class="text-gray-500 text-medium">36% of total criteria</p>
+                    <p class="text-xl font-semibold"> {{ store.getHighPriorityItems.length }} </p>
+                    <p class="text-gray-500 text-medium">{{ highPriorityItemPercentage }}% of total criteria</p>
                 </div>
             </div>
         </div>
@@ -50,6 +50,14 @@
 </template>
 
 <script setup lang="ts">
+import { computed } from 'vue';
+import { useFactorsStore } from '../store/factors-store';
+
+const store = useFactorsStore()
+
+const highPriorityItemPercentage = computed(() => {
+    return (store.getHighPriorityItems?.length / store.getFactorsLength * 100).toFixed(2) 
+})
 
 </script>
 

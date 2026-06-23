@@ -20,6 +20,7 @@ export const useFactorsStore = defineStore("counter", {
     getByType: (state) => {
       return (type: FactorType) => state.factors.filter((item) => item.type === type)
     },
+    getHighPriorityItems: (state) => state.factors.filter(factor => factor.priority === Priority.High)
   },
   actions: {
     addNewItem(item: FactorItem) {
@@ -43,7 +44,7 @@ export const FACTORS_MOCK: FactorItem[] = [
     id: 2,
     title: "Existing customer network",
     type: Factor.Strengths,
-    priority: Priority.Medium,
+    priority: Priority.High,
     dateAdded: new Date("2026-06-02"),
   },
   {
