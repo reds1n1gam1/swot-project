@@ -13,7 +13,7 @@
                         <Tag v-if="data.type === Factor.Strengths" severity="success" value="Strengths"></Tag>
                         <Tag v-if="data.type === Factor.Weaknesses" severity="warn" value="Weaknesses"></Tag>
                         <Tag v-if="data.type === Factor.Opportunities" severity="info" value="Opportunities"></Tag>
-                        <Tag  v-if="data.type === Factor.Threats"severity="danger" value="Threats"></Tag>
+                        <Tag v-if="data.type === Factor.Threats" severity="danger" value="Threats"></Tag>
                     </template>
                 </Column>
                 <Column field="priority" header="Quantity">
@@ -32,13 +32,26 @@
 
                 <Column>
                     <template #body="{ data }">
-                        <Button icon="pi pi-trash" @click="removeRow(data)" severity="secondary" rounded></Button>
+                        <Button icon="pi pi-trash" @click="openRemoveDialog(data)" severity="secondary"
+                            rounded></Button>
                     </template>
                 </Column>
             </DataTable>
 
             <Button type="button" :label="'View all criteria(' + store.getFactorsLength + ')'" icon="pi pi-arrow-right"
                 class="w-full" />
+
+            <Dialog v-model:visible="showRemoveDialog" modal header="You want remove next criteria"
+                :style="{ width: '25rem' }">
+                <div class="flex items-center gap-4 mb-4">
+                    <p class="text-lg font-semibold"> {{ removeOption?.title }} </p>
+                    <p class="text-sm font-semibold text-gray-400"> {{ removeOption?.notes }} </p>
+                </div>
+                <div class="flex justify-end gap-2">
+                    <Button type="button" label="Cancel" severity="secondary" @click="closeRemoveDialog"></Button>
+                    <Button type="button" label="Remove" severity="danger" @click="removeRow"></Button>
+                </div>
+            </Dialog>
 
         </div>
     </div>
@@ -54,17 +67,38 @@ import { Button } from 'primevue';
 import Tag from 'primevue/tag';
 import { Priority } from '../types/PriorityType';
 import { Factor } from '../types/FactorType';
+import Dialog from 'primevue/dialog';
 
 const store = useFactorsStore()
 
 const factorsList: Ref<FactorItem[]> = ref([]);
 
-function editRow(data: FactorItem) {
+const showRemoveDialog = ref(false)
+const removeOption: Ref<FactorItem | undefined> = ref()
 
+function editRow(data: FactorItem) {
 }
 
-function removeRow(data: FactorItem) {
+function openRemoveDialog(data: FactorItem) {
+    showRemoveDialog.value = true
+    removeOption.value = data
+}
 
+function closeRemoveDialog() {
+    showRemoveDialog.value = false
+    removeOption.value = undefined
+}
+
+function removeRow() {
+    if (!removeOption.value) {
+        removeOption.value = undefined
+        showRemoveDialog.value = false
+        return;
+    }
+
+    store.removeItem(removeOption.value?.id)
+    removeOption.value = undefined
+    showRemoveDialog.value = false
 }
 
 onMounted(() => {

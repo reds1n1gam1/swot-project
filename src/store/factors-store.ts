@@ -18,16 +18,18 @@ export const useFactorsStore = defineStore("counter", {
     },
     getFactorsLength: (state) => state.factors.length,
     getByType: (state) => {
-      return (type: FactorType) => state.factors.filter((item) => item.type === type)
+      return (type: FactorType) =>
+        state.factors.filter((item) => item.type === type);
     },
-    getHighPriorityItems: (state) => state.factors.filter(factor => factor.priority === Priority.High)
+    getHighPriorityItems: (state) =>
+      state.factors.filter((factor) => factor.priority === Priority.High),
   },
   actions: {
     addNewItem(item: FactorItem) {
       this.factors.push(item);
     },
-    removeItem(item: FactorItem) {
-      this.factors = this.factors.filter((factor) => factor.id !== item.id);
+    removeItem(removedToId: number) {
+      this.factors = this.factors.filter((factor) => factor.id !== removedToId);
     },
   },
 });
