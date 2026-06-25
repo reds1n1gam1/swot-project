@@ -20,10 +20,7 @@
 
 <script setup lang="ts">
 
-import { computed } from 'vue'
-
 import { useCardStore } from '../store/card-store'
-import { useAppStore } from '../store/app-store'
 import MainLayout from '../layout/MainLayout.vue'
 import AnalysisDetails from '../components/AnalysisDetails.vue'
 import AddCriteria from '../components/AddCriteria.vue'
@@ -32,19 +29,8 @@ import LivePreview from '../components/LivePreview.vue'
 import Stats from '../components/Stats.vue'
 
 const cardStore = useCardStore()
-const appStore = useAppStore()
 
 cardStore.fetchCards()
-
-const currentCategoryItemList = computed(() => {
-    const selectedType = appStore.selectedType
-
-    if (selectedType !== null && selectedType !== undefined) {
-        return cardStore.getCardByType(selectedType)
-    }
-
-    return cardStore.cards
-})
 
 </script>
 

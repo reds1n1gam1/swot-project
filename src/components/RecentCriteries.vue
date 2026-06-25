@@ -77,6 +77,7 @@ const showRemoveDialog = ref(false)
 const removeOption: Ref<FactorItem | undefined> = ref()
 
 function editRow(data: FactorItem) {
+    console.log(data)
 }
 
 function openRemoveDialog(data: FactorItem) {
