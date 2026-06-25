@@ -5,12 +5,17 @@ import { Priority } from "../types/PriorityType";
 
 interface FactorsStore {
   factors: FactorItem[];
+  title: string;
+  description: string;
 }
 
 export const useFactorsStore = defineStore("counter", {
-  state: () => ({ factors: FACTORS_MOCK }) as FactorsStore,
+  state: () =>
+    ({ factors: FACTORS_MOCK, title: "", description: "" }) as FactorsStore,
   getters: {
     getAllFactors: (state) => state.factors,
+    getTitle: (state) => state.title,
+    getDescription: (state) => state.description,
     getRecentFactors: (state) => {
       return state.factors
         .sort((a, b) => a.dateAdded.getTime() - b.dateAdded.getTime())
@@ -30,6 +35,12 @@ export const useFactorsStore = defineStore("counter", {
     },
     removeItem(removedToId: number) {
       this.factors = this.factors.filter((factor) => factor.id !== removedToId);
+    },
+    setTitle(titleName: string) {
+      this.title = titleName;
+    },
+    setDescription(descriptionText: string) {
+      this.description = descriptionText;
     },
   },
 });

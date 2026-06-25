@@ -7,11 +7,12 @@
         <div class="card flex flex-col gap-2 justify-center">
             <div class="flex flex-col gap-2">
                 <label class="text-sm font-medium" for="title">Title</label>
-                <InputText id="title" v-model="form.title" placeholder="Name your SWOT analysis"/>
+                <InputText id="title" v-model="form.title" placeholder="Name your SWOT analysis" />
             </div>
             <div class="flex flex-col gap-2">
                 <label class="text-sm font-medium" for="goal">Goal / Key question</label>
-                <Textarea id="description" v-model="form.goals" rows="5" cols="30" style="resize: none" placeholder="What decision are you trying to make?" />
+                <Textarea id="description" v-model="form.goals" rows="5" cols="30" style="resize: none"
+                    placeholder="What decision are you trying to make?" />
             </div>
         </div>
     </div>
@@ -19,15 +20,25 @@
 
 <script setup lang="ts">
 import { InputText, Textarea } from 'primevue';
-import { reactive } from 'vue';
+import { reactive, watch } from 'vue';
+import { useFactorsStore } from '../store/factors-store';
+
+const store = useFactorsStore()
 
 const form = reactive({
     title: undefined,
     goals: undefined,
 })
 
+watch(form, ({ title, goals }) => {
+    if (!title || !goals) {
+        return;
+    }
+
+    store.setTitle(title)
+    store.setDescription(goals)
+})
+
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>
