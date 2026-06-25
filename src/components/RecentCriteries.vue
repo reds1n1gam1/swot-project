@@ -60,7 +60,7 @@
 <script setup lang="ts">
 import DataTable from 'primevue/datatable';
 import Column from 'primevue/column';
-import { onMounted, ref, type Ref } from 'vue';
+import { onMounted, ref, watch, type Ref } from 'vue';
 import type { FactorItem } from '../types/FactorItem';
 import { useFactorsStore } from '../store/factors-store';
 import { Button } from 'primevue';
@@ -103,6 +103,10 @@ function removeRow() {
 
 onMounted(() => {
     factorsList.value = store.getRecentFactors
+})
+
+watch(store.factors, (newFactors) => {
+    factorsList.value = newFactors
 })
 </script>
 

@@ -15,12 +15,13 @@
                     placeholder="Add any context or detail about this criteria" />
             </div>
             <div class="card flex justify-center">
-                <Select v-model="form.type" :options="types" optionLabel="name" placeholder="Select type" :defaultValue="types[0]"
-                    class="w-full" />
+                <Select v-model="form.type" :options="types" optionLabel="name" placeholder="Select type"
+                    :defaultValue="types[0]" class="w-full" />
             </div>
 
             <div class="card flex justify-center">
-                <SelectButton v-model="form.priority" :options="priorities" optionLabel="name" :defaultValue="priorities[0]"/>
+                <SelectButton v-model="form.priority" :options="priorities" optionLabel="name"
+                    :defaultValue="priorities[0]" />
             </div>
 
             <Button label="Add criteria" @click="addCriteria" icon="pi pi-plus" />
@@ -30,7 +31,7 @@
 
 <script setup lang="ts">
 import { Button, InputText, Select, SelectButton, Textarea } from 'primevue';
-import { reactive, ref, type Ref } from 'vue';
+import { reactive, ref, type Reactive, type Ref } from 'vue';
 import { useFactorsStore } from '../store/factors-store';
 import { Factor, type FactorType } from '../types/FactorType';
 import { Priority, type PriorityType } from '../types/PriorityType';
@@ -38,7 +39,12 @@ import type { FactorItem } from '../types/FactorItem';
 
 const store = useFactorsStore()
 
-const form = reactive({
+const form: Reactive<{
+    title?: string,
+    type?: CategoryObj,
+    priority?: PriorityObj,
+    notes?: string
+}> = reactive({
     title: undefined,
     type: undefined,
     priority: undefined,
@@ -57,9 +63,9 @@ const types: Ref<CategoryObj[]> = ref([
 type PriorityObj = { name: string, value: string }
 
 const priorities: Ref<PriorityObj[]> = ref([
-    { name: 'High', value: Priority.High },
+    { name: 'Low', value: Priority.Low },
     { name: 'Medium', value: Priority.Medium },
-    { name: 'Low', value: Priority.Low }
+    { name: 'High', value: Priority.High },
 ]);
 
 function addCriteria() {
@@ -73,6 +79,15 @@ function addCriteria() {
         notes: form.notes,
         dateAdded: new Date(),
     } as FactorItem)
+
+    resetForm()
+}
+
+function resetForm() {
+    form.title = undefined;
+    form.type = types.value[0];
+    form.priority = priorities.value[0];
+    form.notes = undefined;
 }
 
 function getType(formType?: CategoryObj): FactorType {
