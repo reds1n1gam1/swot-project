@@ -45,46 +45,46 @@
                                 <li>
                                     <ul class="list-none p-0 m-0 overflow-hidden">
                                         <li>
-                                            <a v-ripple
+                                            <RouterLink to="/" v-ripple
                                                 class="flex items-center cursor-pointer p-4 rounded text-surface-700 hover:bg-surface-100 dark:text-surface-0 dark:hover:bg-surface-800 duration-150 transition-colors p-ripple">
                                                 <i class="pi pi-home mr-2"></i>
                                                 <span class="font-medium">Dashboard</span>
-                                            </a>
+                                            </RouterLink>
                                         </li>
                                         <li>
-                                            <a v-ripple
+                                            <RouterLink to="/about" v-ripple
                                                 class="flex items-center cursor-pointer p-4 rounded text-surface-700 hover:bg-surface-100 dark:text-surface-0 dark:hover:bg-surface-800 duration-150 transition-colors p-ripple">
                                                 <i class="pi pi-info mr-2"></i>
                                                 <span class="font-medium">About</span>
-                                            </a>
+                                            </RouterLink>
                                         </li>
                                         <li>
-                                            <a v-ripple
+                                            <RouterLink to="/" v-ripple
                                                 class="flex items-center cursor-pointer p-4 rounded text-surface-700 hover:bg-surface-100 dark:text-surface-0 dark:hover:bg-surface-800 duration-150 transition-colors p-ripple">
                                                 <i class="pi pi-phone mr-2"></i>
                                                 <span class="font-medium">Contact</span>
-                                            </a>
+                                            </RouterLink>
                                         </li>
                                         <li>
-                                            <a v-ripple
+                                            <RouterLink to="'/'" v-ripple
                                                 class="flex items-center cursor-pointer p-4 rounded text-surface-700 hover:bg-surface-100 dark:text-surface-0 dark:hover:bg-surface-800 duration-150 transition-colors p-ripple">
                                                 <i class="pi pi-question mr-2"></i>
                                                 <span class="font-medium">How to use</span>
-                                            </a>
+                                            </RouterLink>
                                         </li>
                                         <li>
-                                            <a v-ripple
+                                            <RouterLink to="'/'" v-ripple
                                                 class="flex items-center cursor-pointer p-4 rounded text-surface-700 hover:bg-surface-100 dark:text-surface-0 dark:hover:bg-surface-800 duration-150 transition-colors p-ripple">
                                                 <i class="pi pi-shield mr-2"></i>
                                                 <span class="font-medium">Privacy</span>
-                                            </a>
+                                            </RouterLink>
                                         </li>
                                         <li>
-                                            <a v-ripple
+                                            <RouterLink to="'/'" v-ripple
                                                 class="flex items-center cursor-pointer p-4 rounded text-surface-700 hover:bg-surface-100 dark:text-surface-0 dark:hover:bg-surface-800 duration-150 transition-colors p-ripple">
                                                 <i class="pi pi-clipboard mr-2"></i>
                                                 <span class="font-medium">Terms</span>
-                                            </a>
+                                            </RouterLink>
                                         </li>
                                     </ul>
                                 </li>
