@@ -15,12 +15,12 @@
                     placeholder="Add any context or detail about this criteria" />
             </div>
             <div class="card flex justify-center">
-                <Select v-model="form.type" :options="categories" optionLabel="name" placeholder="Select type"
+                <Select v-model="form.type" :options="types" optionLabel="name" placeholder="Select type" :defaultValue="types[0]"
                     class="w-full" />
             </div>
 
             <div class="card flex justify-center">
-                <SelectButton v-model="form.priority" :options="priorities" optionLabel="name" />
+                <SelectButton v-model="form.priority" :options="priorities" optionLabel="name" :defaultValue="priorities[0]"/>
             </div>
 
             <Button label="Add criteria" @click="addCriteria" icon="pi pi-plus" />
@@ -47,7 +47,7 @@ const form = reactive({
 
 type CategoryObj = { name: string, value: string }
 
-const categories: Ref<CategoryObj[]> = ref([
+const types: Ref<CategoryObj[]> = ref([
     { name: 'Strength', value: Factor.Strengths },
     { name: 'Weaknesses', value: Factor.Weaknesses },
     { name: 'Opportunities', value: Factor.Opportunities },
