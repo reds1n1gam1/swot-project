@@ -1,52 +1,35 @@
 <template>
     <MainLayout>
         <template #body>
-            <MainBanner></MainBanner>
-
-            <div class="tool">
-                <Sidebar />
-                <Header />
-
-                <div class="content content--list" v-if="appStore.allListView">
-                    <AllListView />
+            <div class="grid grid-cols-5 gap-4 p-6">
+                <div class="col-span-2 grid gap-4">
+                    <AnalysisDetails/>
+                    <AddCriteria/>
+                    <RecentCriteries/>
                 </div>
-
-                <div class="content" v-else>
-                    <Card v-for="card in currentCategoryItemList" :card="card" :type="CardComponentTypes.Card" />
-                    <Card :type="CardComponentTypes.Add" />
+                <div class="col-span-3">
+                    <LivePreview/>
                 </div>
+            </div>
+            <div>
+                <Stats/>
             </div>
         </template>
     </MainLayout>
-
-
-    <Teleport to="body">
-        <modal :show="appStore.showInputModal" @close="appStore.setInputModalState(false)">
-            <template #header> Add new item </template>
-            <template #body>
-                <div>
-                    <SwotInput />
-                </div>
-            </template>
-        </modal>
-    </Teleport>
 </template>
 
 <script setup lang="ts">
 
 import { computed } from 'vue'
 
-import MainBanner from '../components/MainBanner.vue'
-import Header from "../components/Header.vue"
-import SwotInput from "../components/SwotInput.vue"
-import Sidebar from "../components/Sidebar.vue"
-import Card from "../components/Card.vue"
-import AllListView from "../components/AllList.vue"
-import Modal from "../layout/Modal.vue"
 import { useCardStore } from '../store/card-store'
 import { useAppStore } from '../store/app-store'
-import { CardComponentTypes } from '../types/card'
 import MainLayout from '../layout/MainLayout.vue'
+import AnalysisDetails from '../components/AnalysisDetails.vue'
+import AddCriteria from '../components/AddCriteria.vue'
+import RecentCriteries from '../components/RecentCriteries.vue'
+import LivePreview from '../components/LivePreview.vue'
+import Stats from '../components/Stats.vue'
 
 const cardStore = useCardStore()
 const appStore = useAppStore()

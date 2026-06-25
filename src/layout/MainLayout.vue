@@ -1,12 +1,10 @@
 <template>
-    <div class="main">
+    <div class="w-full">
         <Navigation></Navigation>
 
-        <div class="container" id="tool">
+        <div class="container mx-auto">
             <slot name="body"></slot>
         </div>
-
-        <About></About>
 
         <Footer></Footer>
     </div>
@@ -18,14 +16,4 @@ import Navigation from '../components/Navigation.vue'
 </script>
 
 <style scoped>
-.main {
-    width: 100%;
-    padding: var(--main-padding, 0 16px 32px);
-}
-
-@media(max-width: 767px) {
-    .main {
-        --main-padding: 0 16px 32px;
-    }
-}
 </style>
