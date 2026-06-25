@@ -20,12 +20,15 @@
 
 <script setup lang="ts">
 import { InputText, Textarea } from 'primevue';
-import { reactive, watch } from 'vue';
+import { onMounted, reactive, watch, type Reactive } from 'vue';
 import { useFactorsStore } from '../store/factors-store';
 
 const store = useFactorsStore()
 
-const form = reactive({
+const form: Reactive<{
+    title?: string,
+    goals?: string,
+}> = reactive({
     title: undefined,
     goals: undefined,
 })
@@ -37,6 +40,16 @@ watch(form, ({ title, goals }) => {
 
     store.setTitle(title)
     store.setDescription(goals)
+})
+
+onMounted(() => {
+    if (store.getTitle) {
+        form.title = store.getTitle
+    }
+
+    if (store.getDescription) {
+        form.goals = store.getDescription
+    }
 })
 
 </script>
