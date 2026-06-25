@@ -11,8 +11,16 @@
             <template #end>
                 <div class="flex items-center gap-6">
                     <ButtonGroup>
-                        <Button size="small" label="Edit mode" icon="pi pi-pencil" severity="primary" />
-                        <Button size="small" label="Presentation mode" icon="pi pi-desktop" severity="secondary" />
+                        <Button ref="editModeBtn" asChild v-slot="slotProps" size="small" label="Edit mode"
+                            icon="pi pi-pencil" :severity="editModeSeverity">
+                            <RouterLink to="/" :class="slotProps.class">Edit mode</RouterLink>
+                        </Button>
+
+                        <Button ref="presentationModeBtn" asChild v-slot="slotProps" size="small"
+                            label="Presentation mode" icon="pi pi-desktop" :severity="presentationModeSeverity">
+                            <RouterLink to="/presentation" :class="slotProps.class">Presentation mode</RouterLink>
+                        </Button>
+
                     </ButtonGroup>
                     <Button icon="pi pi-plus" size="small" label="New analysis"></Button>
                 </div>
@@ -98,13 +106,38 @@
 </template>
 
 <script setup lang="ts">
-import { Button, ButtonGroup, Drawer, InputText } from 'primevue';
+import { Button, ButtonGroup, Drawer } from 'primevue';
 import Menubar from 'primevue/menubar';
 
-import { ref } from "vue";
+import { ref, watch } from "vue";
+import { useRoute } from 'vue-router';
+
+const route = useRoute()
 
 const visible = ref(false);
 
+const editModeSeverity = ref('secondary')
+const presentationModeSeverity = ref('secondary')
+
+watch(
+    () => route,
+    ({path}) => {
+        if (path === '') {
+            editModeSeverity.value = 'primary';
+            presentationModeSeverity.value = 'secondary';
+            return;
+        }
+
+        if (path === '/presentation') {
+            editModeSeverity.value = 'secondary';
+            presentationModeSeverity.value = 'primary';
+            return;
+        }
+
+        editModeSeverity.value = 'secondary';
+        presentationModeSeverity.value = 'secondary';
+    }
+)
 </script>
 
 <style scoped>
